@@ -1,0 +1,199 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage[svgnames]{xcolor}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb,textcomp}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{chemfig} % Independence sets
+\usepackage[backend=bibtex,
+style=numeric,
+bibencoding=ascii
+%style=alphabetic
+%style=reading
+]{biblatex}
+\addbibresource{C:/Users/samue/Documents/Mathematik-BA_Mathe.bib}
+
+
+\geometry{
+left=20mm,right=20mm,%
+bindingoffset=0mm, top=20mm,bottom=15mm}
+
+\hypersetup{
+    bookmarksnumbered=true,
+    bookmarksopen=false,
+    bookmarksopenlevel=1,
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=DarkBlue,
+    citecolor=DarkRed
+}
+
+\newcommand{\figur}[5][0]{
+		\begin{figure}[H] \centering \em %H / h!
+			\includegraphics[width=#5\textwidth, angle=#1]{#2}
+			\caption{#3}\label{fig:#4}
+		\end{figure}
+}
+
+\linespread{1.3}
+
+\newcommand{\linia}{\rule{\linewidth}{0.5pt}}
+
+% my own titles
+
+%%%
+
+% custom footers and headers
+\usepackage{fancyhdr,lastpage}
+\pagestyle{headings}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\usepackage[thref,thmmarks,amsmath,framed,hyperref]{ntheorem}
+\hbadness=10001
+\hfuzz=1000pt
+\makeatletter\let\Author\@author\makeatother
+\title{Definition of Neural Networks}
+\author{Samuel Lippl}
+\begin{document}
+\renewcommand{\abstractname}{\vspace{-\baselineskip}}
+\theoremstyle{change} %Nummer vor Theoremtitel
+\theoremheaderfont{\normalfont\scshape}
+\theoremseparator{.}
+\theorembodyfont{\normalfont}
+\newtheorem{Def}{Definition}[section]
+\newtheorem{The}[Def]{Theorem}
+\newtheorem{Lem}[Def]{Lemma}
+\newtheorem{Pro}[Def]{Proposition}
+\newtheorem{Kor}[Def]{Korollar}
+\newtheorem{Bem}[Def]{Bemerkung}
+\newtheorem{Not}[Def]{Notation}
+\newtheorem{Bei}[Def]{Example}
+\newtheorem{Ax}[Def]{Axiom}
+\newtheorem{Con}[Def]{Condition}
+\newtheorem{Hyp}[Def]{Hypothesis}
+\newtheorem{OP}{Open Problem}
+\theoremseparator{}
+\newtheorem{Abs}[Def]{}
+\theoremstyle{nonumberplain}
+\theoremheaderfont{\normalfont\itshape}
+\theoremsymbol{$\square$}
+\theoremseparator{.}
+\newtheorem{Bew}{Proof}
+%Lange Beweise enthalten oft Lemmata oder einzelne Teilbeweise kleinere Behauptungen. Diese werden wir Hilfslemmata nennen. Der Hauptunterschied zwischen Lemmata und Hilfslemmata ist, das Hilfslemmata spezifisch zum Theorem gehören und griechisch numeriert sind, während Lemmata unabhängig von diesem sind.
+\theoremstyle{change}
+\theoremindent1cm
+\theoremseparator{.}
+\theoremsymbol{}
+\theoremheaderfont{\normalfont\scshape}
+\newtheorem{BLem}[Def]{Lemma}
+\theoremstyle{plain}
+\theoremindent1cm
+\theoremseparator{.}
+\theoremnumbering{greek}
+\theoremheaderfont{\normalfont\itshape}
+\newtheorem{HLem}{Sublemma}[Def]
+\newtheorem{BAbs}[HLem]{}
+\theoremstyle{nonumberplain}
+\theoremindent1cm
+\theoremseparator{.}
+\theoremheaderfont{\normalfont\itshape}
+\theoremsymbol{$\triangle$}
+\newtheorem{BBew}{Proof}
+\maketitle
+\tableofcontents
+\textbf{Open Problems: Overview}\\
+\listtheorems{OP}\\
+Neural networks are very general notions that encompass many different varieties. While there have been attempts to restrict make restrictions that are derived from their purpose (see, for instance, \cite{Guresen2011}), I argue that these restrictions make the definition more complicated to prove but not more powerful. Therefore, I provide a definition in the sense of \cite{Rojas1996}. However, I have attempted to make the notation more compact for my purposes and I have worked out the different aspects of neural networks more clearly. Finally, my definition is broader than Rojas' definition in \cite{Rojas1996}.
+\section{Structure of Neural Networks}
+\subsection{General Structure}
+\begin{Def}[Elementary Structure of Neural Networks]\label{def:neuralnets}
+A \emph{neural network} is defined by its \emph{elementary structure} which is a directed graph $(\mathcal{V},\mathcal{C}),\mathcal{C}\subseteq\mathcal{V}\times\mathcal{V}$, that is \emph{completely connected}.\\
+We call the nodes in $\mathcal{V}$ \emph{Processing Units} (PU) und the edges in $\mathcal{C}$ \emph{Unit Connections} (UC). We will leave open the possibility to associate a class attribute with PUs or UCs that may restrict different network aspects (see, for instance, example \ref{ex:inhib}).
+\end{Def}
+\begin{Not}
+We associate $\mathcal{C}$ with the relations $\to_{\mathcal{C}}$ and $--_{\mathcal{C}}$ on $\mathcal{V}$, i. e.
+\begin{align}
+\begin{split}
+v\to w&\equiv(v,w)\in\mathcal{C}\equiv v\leftarrow w\\
+v--w&\equiv v\to w\vee w\to v
+\end{split}
+\end{align}
+Where the context is clear, we write $\to$ and $--$ instead of $\to_{\mathcal{C}}$ and $--_{\mathcal{C}}$.
+\end{Not}
+We now complete Definition \ref{def:neuralnets}:
+\begin{Def}[Complete Connectedness]\label{def:connected}
+We call a graph completely connected if and only if 
+\begin{equation}
+\underset{v,w\in\mathcal{V}}{\forall}\underset{k\in\mathbb{N}^+}{\exists}\underset{u_1,\dotsc,u_k\in\mathcal{V}}{\exists}u_1=v\wedge\underset{i\in\{1,\dotsc,k-1\}}{\forall}u_i--u_{i+1}\wedge u_k=w
+\end{equation}
+\end{Def}
+\begin{Abs}
+The restriction that a neural network must be completely connected is sensible. It prevents networks from incorporating PUs or sets of PUs that are independent from the rest of the network. A single isolated PU may simply be ignored and a set of isolated PUs may be considered as a separate network\footnote{
+Of course, a single PU could also be considered as a neural network.}.\\
+(Where does this restriction come to use?)
+\end{Abs}
+\begin{Not}[Preceding and succeeding units]
+If $u\in\mathcal{V}$ is a PUs we define the set of \emph{preceding} PUs
+\begin{equation}
+\mathcal{C}_u:=\left\{v\in\mathcal{V}|v\to u\right\}
+\end{equation}
+and the set of \emph{succeeding} PUs
+\begin{equation}
+\mathcal{C}^u:=\left\{w\in\mathcal{V}|u\leftarrow w\right\}
+\end{equation}
+\end{Not}
+\begin{Def}[Acyclical Networks]
+The network $(\mathcal{V},\mathcal{C})$ is called \emph{acyclical} or \emph{feed-forward} if and only if the relation $\to$ is acyclical.
+\end{Def}
+\begin{Abs}
+The elementary structure of a neural network only specifies how the PUs are connected but not how they use these connections. With respect to this task, we have to differentiate between the \emph{network assumptions} that cannot be change during its applications and its \emph{parameters} that can be changed during learning (see section \ref{subsec:learning}). While specific values of the latter should not be considered as part of the network, the values they may take are as relevant as the way they parametrize the network.
+\end{Abs}
+\begin{Def}[Functional Structure]\label{def:integrate}
+We define the \emph{parameter space} $\Theta$ and the \emph{integrative functions} $\mathcal{G}=\left(g_u\right)_{u\in\mathcal{V}}$ where 
+\begin{equation}\label{eq:integrative fun}
+g_u:\mathbb{R}^{\mathcal{C}_u}\times\Theta\to\mathbb{R}\qquad (x,\theta)\mapsto g_u(x|\theta)
+\end{equation}
+We call $(\mathcal{G},\Theta)$ the \emph{functional structure} of the neural network and $(\mathcal{V},\mathcal{C},\mathcal{G},\Theta)$ its \emph{structure}.
+\end{Def}
+\begin{Abs}
+I will note that we have not associated these parameters with a specific PU or UC. The main reason for this is the possibility of shared parameters, see definition \ref{def:pred2}. I will also note that this chapter is actually not concerned with how the network generates its values which will be of concern in chapter \ref{ch:states}. The reader may however have inferred from (\ref{eq:integrative fun}) that I expect the PUs to take real values. This is only because there has been no reason to generalize this definition. The relevant concepts can easily be generalized to more general spaces, however.
+\end{Abs}
+\subsection{Additive neural networks}
+\begin{Def}[Additive neural network]
+An \emph{additive neural network} is defined by certain restrictions on the functional structure. The parameter space is now $\Theta\subseteq\mathbb{R}^{\mathcal{C}}$ and we define a set of \emph{unit functions} $\mathcal{F}=(f_u)_{u\in\mathcal{V}}$ where
+\begin{equation}
+f_u:\mathbb{R}\to\mathbb{R}
+\end{equation}
+Then, the integrative functions are defined by
+\begin{equation}
+g_u(x|\theta):=\sum_{v\in\mathcal{C}_u}\theta_{(v,u)}f_v(x_v)
+\end{equation}
+By defining
+\begin{align}
+\theta^v_u\equiv\theta_{(v,u)}\qquad\theta^v\equiv\left(\theta^v_u\right)_{u\in\mathcal{C}^v}\qquad\theta_u\equiv\left(\theta^v_u\right)_{v\in\mathcal{C}_u}\\
+f_V:\mathbb{R}^V\to\mathbb{R}^V\quad f_V(x)&:=\left(f_v(x_v)\right)_{v\in V}\quad V\subseteq\mathcal{V}
+\end{align}
+and using the ordinary definition of matrix multiplication we can notate
+\begin{equation}
+g_u(x|\theta)=\theta_u^Tf_{\mathcal{C}_u}(x)
+\end{equation}
+where $\theta^T$ is the transpose of $\theta$.
+\end{Def}
+\begin{Abs}
+In many neural networks all unit functions are provided by a unique function $f$. Most unit functions map their input to $(-1,1)$ or $(0,1)$. Popular choices are the sigmoid function $f(x)=\frac{1}{1+e^{-cx}}$ or the tangens hyperbolicus $f(x)=\tanh(x)$. If we define $f=\text{id}$, the resulting network provides a linear model.\\
+Finally, many neural networks work in layers: they are structured into $L$ layers of PUs where $v_1^{(l)},\dotsc,v_{n_i}^{(l)}\in\mathcal{V}$ and $\mathcal{C}=\left\{(v_i^{(l)},v_j^{(l+1)})|l=0,\dotsc,L-1,i=1,\dotsc,n_l,j=1,\dotsc,n_{l+1}\right\}$ where input is provided to layer $0$ and the network produces some kind of output at layer $L$. It may helpful to use such a structure to visualize certain notions. However, as far as I see it, a general feed-forward architecture provides all the benefits of a layered structure which may be justified by Proposition \ref{prop:feedforward to layered}.
+\end{Abs}
+\subsection{Predictive Coding}
+\begin{Abs}[Predictive Coding I: The Generative Model]
+Predictive Coding serves as a model of how our brain processes sensations to perceptions and is based on \cite{Mumford1992}. It poses that our brain processes data by inferring hidden \emph{causes} which are, in this case, "simply the states of processes generating sensory data" \cite[][819]{Friston2005}.
+\end{Abs}
+\printbibliography
+\end{document}

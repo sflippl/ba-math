@@ -1,0 +1,216 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage[svgnames]{xcolor}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb,textcomp}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{chemfig} % Independence sets
+\usepackage[backend=bibtex,
+style=numeric,
+bibencoding=ascii
+%style=alphabetic
+%style=reading
+]{biblatex}
+\addbibresource{C:/Users/samue/Documents/Mathematik-BA_Mathe.bib}
+
+
+\geometry{
+left=20mm,right=20mm,%
+bindingoffset=0mm, top=20mm,bottom=15mm}
+
+\hypersetup{
+    bookmarksnumbered=true,
+    bookmarksopen=false,
+    bookmarksopenlevel=1,
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=DarkBlue,
+    citecolor=DarkRed
+}
+
+\newcommand{\figur}[5][0]{
+		\begin{figure}[H] \centering \em %H / h!
+			\includegraphics[width=#5\textwidth, angle=#1]{#2}
+			\caption{#3}\label{fig:#4}
+		\end{figure}
+}
+
+\linespread{1.3}
+
+\newcommand{\linia}{\rule{\linewidth}{0.5pt}}
+
+% my own titles
+
+%%%
+
+% custom footers and headers
+\usepackage{fancyhdr,lastpage}
+\pagestyle{headings}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\usepackage[thref,thmmarks,amsmath,framed,hyperref]{ntheorem}
+\hbadness=10001
+\hfuzz=1000pt
+\makeatletter\let\Author\@author\makeatother
+\title{The Backpropagation Algorithm and its Approximations}
+\author{Samuel Lippl}
+\begin{document}
+\renewcommand{\abstractname}{\vspace{-\baselineskip}}
+\theoremstyle{change} %Nummer vor Theoremtitel
+\theoremheaderfont{\normalfont\scshape}
+\theoremseparator{.}
+\theorembodyfont{\normalfont}
+\newtheorem{Def}{Definition}[section]
+\newtheorem{The}[Def]{Theorem}
+\newtheorem{Lem}[Def]{Lemma}
+\newtheorem{Pro}[Def]{Proposition}
+\newtheorem{Kor}[Def]{Korollar}
+\newtheorem{Bem}[Def]{Bemerkung}
+\newtheorem{Not}[Def]{Notation}
+\newtheorem{Bei}[Def]{Example}
+\newtheorem{Ax}[Def]{Axiom}
+\newtheorem{Con}[Def]{Condition}
+\newtheorem{Hyp}[Def]{Hypothesis}
+\newtheorem{OP}{Open Problem}
+\theoremseparator{}
+\newtheorem{Abs}[Def]{}
+\theoremstyle{nonumberplain}
+\theoremheaderfont{\normalfont\itshape}
+\theoremsymbol{$\square$}
+\theoremseparator{.}
+\newtheorem{Bew}{Proof}
+%Lange Beweise enthalten oft Lemmata oder einzelne Teilbeweise kleinere Behauptungen. Diese werden wir Hilfslemmata nennen. Der Hauptunterschied zwischen Lemmata und Hilfslemmata ist, das Hilfslemmata spezifisch zum Theorem gehören und griechisch numeriert sind, während Lemmata unabhängig von diesem sind.
+\theoremstyle{change}
+\theoremindent1cm
+\theoremseparator{.}
+\theoremsymbol{}
+\theoremheaderfont{\normalfont\scshape}
+\newtheorem{BLem}[Def]{Lemma}
+\theoremstyle{plain}
+\theoremindent1cm
+\theoremseparator{.}
+\theoremnumbering{greek}
+\theoremheaderfont{\normalfont\itshape}
+\newtheorem{HLem}{Sublemma}[Def]
+\newtheorem{BAbs}[HLem]{}
+\theoremstyle{nonumberplain}
+\theoremindent1cm
+\theoremseparator{.}
+\theoremheaderfont{\normalfont\itshape}
+\theoremsymbol{$\triangle$}
+\newtheorem{BBew}{Proof}
+\maketitle
+\textbf{Open Problems: Overview}\\
+\listtheorems{OP}
+\section{Neural Networks}
+Neural networks are very general notions that encompass many different varieties. There have been attempts to make certain restrictions on neural networks that are derived from their purpose, see, for instance, \cite{Guresen2011}. I would argue that these restrictions make the definition more complicated to prove but not more powerful to use. Therefore, my suggestion for a definition largely orients itself by \cite{Rojas1996} although I have slightly tweaked the notation where I deemed it sensible.
+\begin{Def}[Neural Networks]
+Consider a directed graph $(\mathcal{V}, \mathcal{E})$ where $\mathcal{E}\subseteq \mathcal{V}\times\mathcal{V}$. The elements of $\mathcal{V}$ are called \emph{Processing Units} (PU). Every PU has to be connected to some other PU. Among the PUs are the \emph{Input Units} (IU) $\mathcal{I}\subseteq\mathcal{V}$ and the \emph{Output Units} (OU) $\mathcal{O}\subseteq\mathcal{V}, \mathcal{I}\cap\mathcal{O}=\emptyset$ where each IU is connected to some OU by a directed graph\footnote{
+The notion of Input und Output Units is intuitively clear. For now, I will not restrict my definition and I can even imagine situations where $\mathcal{I}\cap\mathcal{O}\ne\emptyset$ would be possible.}.
+Each PU $v$ is associated with a differentiable function $f_v:\mathbb{R}\to\mathbb{R}$ where $(f_v)_{v\in\mathcal{V}}=:\mathcal{F}$ and every edge $(v,w)\in\mathcal{E}$ is associated with a weight $\xi^v_w\in\mathbb{R}$. We write $\mathcal{E}_w:=\left\{v\in\mathcal{V}:(v,w)\in\mathcal{E}\right\}$ and $\mathcal{E}^v:=\left\{w\in\mathcal{V}:(v,w)\in\mathcal{E}\right\}$. Now, every PU $v\in\mathcal{V}$ has an input $i(v)\in\mathbb{R}$ and an output $o(v)=f_v\left(i(v)\right)\in\mathbb{R}$. We call a \emph{network state} $S=\left(i(v),o(v)\right)_{v\in\mathcal{V}}$ \emph{compatible} if and only if for all $w\in\mathcal{V}$
+\begin{equation}\label{aggr}
+i(w)=\sum_{v\in\mathcal{E}_w}\xi^v_wo(v)
+\end{equation}
+A \emph{network function} $N_{\xi}$ ($\xi\in\mathbb{R}^{\mathcal{E}}$ denotes the weights $\xi^v_w$) associates to each input $i\in\mathbb{R}^{\mathcal{I}}$ a compatible network state $N(i)$ where we denote the outputs of the network state by $O_{\xi}(i)$.\\
+Finally, a neural network can be trained where we consider a finite number of examples $(i,o)_1,\dotsc,(i,o)_k$ and update the weights according to a training function $\mathcal{T}:\mathbb{R}^{\mathcal{E}}\times\left(\mathbb{R}^{\mathcal{I}}\times\mathbb{R}^{\mathcal{O}}\right)^{<\mathbb{N}}\to\mathbb{R}^{\mathcal{E}}$ such that the new weights are $\mathcal{T}(\xi,(i,o))$ where for any set $M$, $M^{\mathbb{N}}=\bigcup_{n\in\mathbb{N}_0}M^n$ and $M^0={\emptyset}$.\\
+We call $(\mathcal{V},\mathcal{E},\mathcal{F},\xi,N,\mathcal{T})$ a \emph{neural network}.
+\end{Def}
+It will often be helpful to associate $\mathcal{E}$ with a relation $\to$ where $v\to w\equiv(v,w)\in\mathcal{E}\equiv w\leftarrow v$.
+\begin{Def}
+A neural network is called \emph{feed-forward} if and only if $\to$ is acyclical.
+\end{Def}
+More generalizations would be possible; for instance, we may consider general aggregation functions $f\left(o(v)\right)_{v\in\mathcal{E}_w}$ instead of the additive structure above. If that becomes necessary, I will consider such a generalization. For now, however, we are only concerned with feed-forward neural networks.
+\subsection{Important characteristics}
+Computers mostly process data sequentially where each unit transforms an input into an output that is given to the next unit. Here, we do not rely on parallel processing.\footnote{
+Modern computers, to an extent, work with parallel processing. While the extent would be interesting to compare, I will elaborate on the intent below.}
+\begin{OP}[Parallelity in Computers and Neuronal Networks]
+Is parallel processing in computers and neuronal networks comparable?
+\end{OP}
+If, for some reason, one processing unit does not work properly, the network will face the possibility of global failure. For artificial computers, this is acceptable because we can find other workarounds. I can imagine that processing does not directly depend on the physical parts and there is an error correction on another level. Additionally, an appropriate reaction to unreliable units is improving the units, not only improving error compensation. With respect to our brain, we do not have this luxury:
+\begin{itemize}
+\item
+Cells die eventually, of natural causes, by attack or by external impact.
+\item
+Cells are vastly more complex than artificial processing units --- arguably even more complex than the most sophisticated computers. While much of this complexity aims to make the cell more reliable, there are also many procedures where something can go wrong.
+\item
+Cells may fire spontaneously.
+\end{itemize}
+Most importantly, while we can simply modify production of processing units, there is no conscious process behind neurons that could make these global changes to our system. An important characteristic of neural networks, with respect to their model of our brains is therefore a stochastic error rate that is compensated by the parallel pathways. This compensation is illustrated in \cite[][51]{Rojas1996}. If we consider artificial neural networks such an error prevention is not as important. However, another feature of parallelity benefits both neural and neuronal networks: by having more than one transformation of the same processing units, a transformation of the input space allows a different perspective on the problem which may substantially simplify a problem. Take, for instance, our visual pathways: the input to our retina is transformed to different characteristics like orientation or relative brightness (see \cite[][257-276]{Purves2012}) and artifical visual recognition systems have made use of similar strategies \cite[][70-73]{Rojas1996}. This example demonstrates that there are useful analogies between artificial and neuronal processing. It is therefore important to recognize where problems in domain have corresponding problems in the other domain and where solutions to such problems in one domain would be feasible in the other. For instance, parallelity as a feature space transformation is a useful characteristic in an artifical and a biological framework while parallelity as an error compensation is not as important \textit{in silica}. The fact that parallelity is such a crucial aspect of neural networks has led \cite{Guresen2011} to claim parallelity as a necessary feature of neural networks. In their definition of neural networks, Guresen and Kayakutlu require that "at least two of the multiple [Processing Elements are] connected in parallel" \cite[][428]{Guresen2011} because, they argue, "structures [...] with one or more [Processing Elements] connected serially cannot be referred as [a neural network] because it will lose the power of parallel computing and starts to act more like existing computers than a brain" \cite[][428]{Guresen2011}. In principle, I agree with their point. I would argue, however, that it is not helpful to include such a criterion in the definition. After all, if there is one parallel pathway in a massive serial network, would this correspond to a neural network according to their notion. It seems to me that this definition therefore opens an issue that cannot be resolved, analogous to trying to define "many grains of sand" -- without doubt, one grain of sand is necessary to have many but it is not sufficient and we can probably not find a hard definition of such a vague statement. We would be better advised to simply define the characteristic "many" refers to, i. e. the \emph{number} of grains of sand. Then, we can use more rigorous notions instead of many grains of sand. Comparably, parallel processing such that it is advantageous cannot be covered by such a broad definition -- not only does parallelity exist on a spectrum, it also strongly depends on the context. I would therefore suggest that an attempt to find a way to talk about parallelity may be more fruitful than Guresen and Kayakutlu's hard borders. I have not found the definition of a comparable \emph{degree of parallelity} and Guresen and Kayakutlu themselves also do not elaborate on what they mean by parallel connections.
+\begin{OP}
+[Degree of parallelity]
+How may we define the \emph{degree of parallelity} of a neural network?
+\end{OP}
+\subsection{Backpropagation Algorithm}
+The backpropagation algorithm is a particularly popular training function $\mathcal{T}$ that is defined on all feed-forward networks.
+\begin{OP}[Backpropagation on recurrent networks]
+How may we define backpropagation for a given network function on a recurrent network?
+\end{OP}
+We define a differentiable loss function $L$ for a given set of training examples
+\begin{equation}
+L:\mathbb{R}^{\mathcal{E}}\times\left(\mathbb{R}^{\mathcal{I}}\times\mathbb{R}^{\mathcal{O}}\right)^{<\mathbb{N}}\to\mathbb{R}^+_0, \left(\xi,(i,o)_1,\dotsc,(i,o)_k\right)\mapsto L(\xi|i;o)
+\end{equation}
+that compares the network's prediction with the actual output to compute a loss. Log-likelihood functions are popular loss functions, most notably the quadratic loss function
+\begin{equation}
+L(\xi|i;o)=\frac12\sum_{j=1}^k\left\|O_{\xi}(i_j)-o_j\right\|_2^2
+\end{equation}
+The computation of the network weights is now an optimization problem:
+\begin{equation}
+\xi=\arg\min_{\xi\in\mathbb{R}^{\mathcal{E}}}L(\xi|i;o)
+\end{equation}
+where $i$ and $o$ are given.\\
+As both $L$, all PU functions $f_v$ and the aggregation (\ref{aggr}) are differentiable, we can compute the loss gradient
+\begin{equation}
+\nabla L=\left(\frac{\partial L}{\partial \xi}\right)_{\xi\in\mathbb{R}^{\mathcal{E}}}
+\end{equation}
+This allows us to determine the minimum by gradient descent with the iterative update
+\begin{equation}\label{update}
+\xi^{(t)}=\xi^{(t-1)}+\alpha\nabla L(\xi|i;o)
+\end{equation}
+The backpropagation algorithm is a method of gradient descent that allows us to determine the gradient. Before I go on to explain how the algorithm works, I will note that it does not prevent us from stopping in local minima, even in the case of a convex loss function.
+\begin{OP}[Convex processing functions]
+What if $\mathcal{F}$ is convex? This is normally not the case, as we mostly map the input to $(0,1)$, for example with the sigmoid function $f_c(x)=\frac{1}{1+e^{-cx}}$, but it would still be interesting to consider. As far as I see, with $\mathcal{F}$ and $L$ convex in $N_{\xi}(i)$, $L$ should be convex in $i$.
+\end{OP}
+As $\nabla L(i;o|\xi)=\sum_{j=1}^k\nabla L(i_j;o_j|\xi)$ we can consider, without loss of generality, one training example and a univariate output $o$. The framework I present has been inspired by \cite{Rojas1996} although I would argue that my approach is a bit more direct.\\
+As $\frac{\partial L}{\partial \xi}(\xi|i;o)=\frac{\partial L}{\partial O_{\xi}(i)}(\xi|i;o)\cdot\frac{\partial O_{\xi}(i)}{\partial\xi}$, it suffices to compute the gradient $\nabla N_{\xi}$. In order to achieve that, our first goal is to compute the gradients $\frac{\partial O_{\xi}}{\partial i(v)},\frac{\partial N_{\xi}}{\partial o(v)}$.
+\paragraph{First step: Feed-forward computation}
+In the first step, we extend the neural network by not only computing $i$ and $o$ but also new functions $i'$ and $o'$ where
+\begin{equation}
+o'(v):=\frac{\partial o(v)}{\partial i(v)}=f'\left(i(v)\right)
+\quad
+i'(w):=\left(\frac{\partial i(w)}{\partial o(v)}\right)_{v\in\mathcal{E}_w}=\left(\xi^v_w\right)_{v\in\mathcal{E}_w}
+\end{equation}
+Note that these functions are only locally stored but only $i$ and $o$ are used as input in the following PUs.
+\paragraph{Second step: Backpropagation}
+We now recursively compute $\frac{\partial O_{\xi}}{\partial i(v)},\frac{\partial O_{\xi}}{\partial o(v)}$. Consider a PU $v$ and suppose that for all $w\in\mathcal{E}^v$, we have already computed $\frac{\partial O_{\xi}(i)}{\partial i(w)}$. Then,
+\[
+\frac{\partial O_{\xi}(i)}{\partial o(v)}=\frac{\partial O_{\xi}(i)}{\partial\left(i(w)\right)_{w\in\mathcal{E}^v}}\cdot\frac{\partial \left(i(w)\right)_{w\in\mathcal{E}^v}}{\partial o(v)}=\sum_{w\in\mathcal{E}^v}\xi^v_w\frac{\partial O_{\xi}(i)}{\partial i(w)}
+\]
+On the other hand, 
+\[
+\frac{\partial O_{\xi}(i)}{\partial i(v)}=\frac{\partial O_{\xi}(i)}{\partial o(v)}o'(v)
+\]
+which, as we have a feed-forward network, allows us to iteratively compute the gradients in question. Finally, we note that for any $(v,w)\in\mathcal{E}$
+\begin{equation}
+\frac{\partial i(w)}{\partial \xi^v_w}=o(v)
+\end{equation}
+and therefore
+\begin{equation}
+\frac{\partial O_{\xi}(i)}{\partial\xi^v_w}=\frac{\partial O_{\xi}(i)}{\partial i(w)}o(v)
+\end{equation}
+which yields the necessary gradient 
+\begin{equation}
+\nabla L(\xi|i;o)=\frac{\partial L}{\partial O_{\xi}(i)}(\xi|i;o)\frac{\partial O_{\xi}(i)}{\partial\xi^v_w}
+\end{equation}
+and allows us to update $\xi$ according to (\ref{update}).
+\section{Biological networks}
+The biological plausibility of the backpropagation algorithm is generally being doubte
+\printbibliography
+\end{document}

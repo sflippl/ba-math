@@ -1,0 +1,140 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{nty/global/}
+  \entry{Guresen2011}{article}{}
+    \name{author}{2}{}{%
+      {{hash=GE}{%
+         family={Guresen},
+         familyi={G\bibinitperiod},
+         given={Erkam},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=KG}{%
+         family={Kayakutlu},
+         familyi={K\bibinitperiod},
+         given={Gulgun},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \keyw{ann,artificial neural network,graph theory}
+    \strng{namehash}{GEKG1}
+    \strng{fullhash}{GEKG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.1016/j.procs.2010.12.071
+    \endverb
+    \field{pages}{426\bibrangedash 433}
+    \field{title}{{Definition of artificial neural networks with comparison to
+  other networks}}
+    \field{volume}{3}
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/Downloads/Papers/Definition of artificial
+    \verb  neural networks with comparison to other networks.pdf:pdf
+    \endverb
+    \field{journaltitle}{Procedia Computer Science}
+    \field{annotation}{%
+    This paper provides a definition for neural networks that seems sensible
+  and rigorous (except for the term "connected in parallel" which I would
+  propose as {\textless}{\textgreater} (see remark).%
+    }
+    \field{year}{2011}
+  \endentry
+
+  \entry{Purves2012}{book}{}
+    \name{author}{6}{}{%
+      {{hash=PD}{%
+         family={Purves},
+         familyi={P\bibinitperiod},
+         given={Dale},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=AGJ}{%
+         family={Augustine},
+         familyi={A\bibinitperiod},
+         given={George\bibnamedelima J.},
+         giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=FD}{%
+         family={Fitzpatrick},
+         familyi={F\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=HWC}{%
+         family={Hall},
+         familyi={H\bibinitperiod},
+         given={William\bibnamedelima C.},
+         giveni={W\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=LAS}{%
+         family={LaMantia},
+         familyi={L\bibinitperiod},
+         given={Anthony\bibnamedelima Samuel},
+         giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=WLE}{%
+         family={White},
+         familyi={W\bibinitperiod},
+         given={Leonard\bibnamedelima E.},
+         giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Sinauer Associates, Inc.}%
+    }
+    \strng{namehash}{PD+1}
+    \strng{fullhash}{PDAGJFDHWCLASWLE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{edition}{5}
+    \field{title}{{Neuroscience}}
+    \field{year}{2012}
+  \endentry
+
+  \entry{Rojas1996}{book}{}
+    \name{author}{1}{}{%
+      {{hash=RR}{%
+         family={Rojas},
+         familyi={R\bibinitperiod},
+         given={Ra{\'{u}}l},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer-Verlag}%
+    }
+    \strng{namehash}{RR1}
+    \strng{fullhash}{RR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{{Neural Networks}}
+    \list{location}{1}{%
+      {Berlin}%
+    }
+    \field{year}{1996}
+  \endentry
+\endsortlist
+\endinput

@@ -1,0 +1,172 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{nty/global/}
+  \entry{Friston2005}{article}{}
+    \name{author}{1}{}{%
+      {{hash=FK}{%
+         family={Friston},
+         familyi={F\bibinitperiod},
+         given={Karl},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \keyw{bayesian,cortical,generative models,hierarchical,inference,predictive
+  coding}
+    \strng{namehash}{FK1}
+    \strng{fullhash}{FK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \verb{doi}
+    \verb 10.1098/rstb.2005.1622
+    \endverb
+    \field{pages}{815\bibrangedash 836}
+    \field{title}{{A theory of cortical responses}}
+    \field{volume}{360}
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/Downloads/Papers/815.full.pdf:pdf
+    \endverb
+    \field{journaltitle}{Philosophical Transactions of the Royal Society B}
+    \field{year}{2005}
+  \endentry
+
+  \entry{Guresen2011}{article}{}
+    \name{author}{2}{}{%
+      {{hash=GE}{%
+         family={Guresen},
+         familyi={G\bibinitperiod},
+         given={Erkam},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=KG}{%
+         family={Kayakutlu},
+         familyi={K\bibinitperiod},
+         given={Gulgun},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \keyw{ann,artificial neural network,graph theory}
+    \strng{namehash}{GEKG1}
+    \strng{fullhash}{GEKG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.1016/j.procs.2010.12.071
+    \endverb
+    \field{pages}{426\bibrangedash 433}
+    \field{title}{{Definition of artificial neural networks with comparison to
+  other networks}}
+    \field{volume}{3}
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/Downloads/Papers/Definition of artificial
+    \verb  neural networks with comparison to other networks.pdf:pdf
+    \endverb
+    \field{journaltitle}{Procedia Computer Science}
+    \field{annotation}{%
+    This paper provides a definition for neural networks that seems sensible
+  and rigorous (except for the term "connected in parallel" which I would
+  propose as {\textless}{\textgreater} (see remark).%
+    }
+    \field{year}{2011}
+  \endentry
+
+  \entry{Mumford1992}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MD}{%
+         family={Mumford},
+         familyi={M\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MD1}
+    \strng{fullhash}{MD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{abstract}{%
+    This paper is a sequel to an earlier paper which proposed an active role
+  for the thalamus, inte-grating multiple hypotheses formed in the cortex via
+  the thalamo-cortical loop. In this paper, I put forward a hypothesis on the
+  role of the reciprocal, topographic pathways between two cortical areas, one
+  often a 'higher' area dealing with more abstract information about the world,
+  the other 'lower', dealing with more concrete data. The higher area attempts
+  to fit its ab-stractions to the data it receives from lower areas by sending
+  back to them from its deep pyramidal cells a template reconstruction best
+  fitting the lower level view. The lower area attempts to reconcile the
+  reconstruction of its view that it receives from higher areas with what it
+  knows, sending back from its superficial pyramidal cells the features in its
+  data which are not predicted by the higher area. The whole calculation is
+  done with all areas working simultaneously, but with order imposed by
+  synchronous activity in the various top-down, bot-tom-up loops. Evidence for
+  this theory is reviewed and experimental tests are proposed. A third part of
+  this paper will deal with extensions of these ideas to the frontal lobe.%
+    }
+    \verb{doi}
+    \verb 10.1007/BF00198477
+    \endverb
+    \verb{eprint}
+    \verb arXiv:1408.1149
+    \endverb
+    \field{isbn}{0340-1200}
+    \field{issn}{03401200}
+    \field{number}{3}
+    \field{pages}{241\bibrangedash 251}
+    \field{title}{{On the computational architecture of the neocortex - II The
+  role of cortico-cortical loops}}
+    \field{volume}{66}
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/Downloads/Papers/10.1007{\%}2FBF00198477.
+    \verb pdf:pdf
+    \endverb
+    \field{journaltitle}{Biological Cybernetics}
+    \field{eprinttype}{arXiv}
+    \field{year}{1992}
+  \endentry
+
+  \entry{Rojas1996}{book}{}
+    \name{author}{1}{}{%
+      {{hash=RR}{%
+         family={Rojas},
+         familyi={R\bibinitperiod},
+         given={Ra{\'{u}}l},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer-Verlag}%
+    }
+    \strng{namehash}{RR1}
+    \strng{fullhash}{RR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{{Neural Networks}}
+    \list{location}{1}{%
+      {Berlin}%
+    }
+    \field{year}{1996}
+  \endentry
+\endsortlist
+\endinput

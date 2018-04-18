@@ -3,22 +3,66 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {Not}{{Notation}{1.{2}}{}}{1}{Def.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {Def}{{Definition}{1.{3}}{Complete Connectedness}}{1}{Def.1.3}
+\contentsline {Def}{{Definition}{1.{3}}{Complete Connectedness}}{2}{Def.1.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {Abs}{{}{1.{4}}{}}{2}{Def.1.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {Not}{{Notation}{1.{5}}{Preceding and succeeding units}}{2}{Def.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {Def}{{Definition}{1.{6}}{Acyclical Networks}}{2}{Def.1.6}
+\contentsline {Def}{{Definition}{1.{6}}{Acyclic Networks}}{2}{Def.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {Abs}{{}{1.{7}}{}}{2}{Def.1.7}
+\contentsline {Def}{{Definition}{1.{7}}{}}{2}{Def.1.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {Def}{{Definition}{1.{8}}{Functional Structure}}{2}{Def.1.8}
+\contentsline {Pro}{{Proposition}{1.{8}}{}}{2}{Def.1.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {Abs}{{}{1.{9}}{}}{2}{Def.1.9}
+\contentsline {Bew}{{Proof}{1}{}}{2}{Bew.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {Def}{{Definition}{1.{10}}{Additive neural network}}{2}{Def.1.10}
+\contentsline {Abs}{{}{1.{9}}{}}{3}{Def.1.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {Abs}{{}{1.{10}}{}}{3}{Def.1.10}
 \defcounter {refsection}{0}\relax 
 \contentsline {Abs}{{}{1.{11}}{}}{3}{Def.1.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {Abs}{{}{1.{12}}{Predictive Coding I: The Generative Model}}{3}{Def.1.12}
+\contentsline {Def}{{Definition}{1.{12}}{Functional Structure}}{3}{Def.1.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {Abs}{{}{1.{13}}{}}{3}{Def.1.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{1.{14}}{Additive neural network}}{3}{Def.1.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {Abs}{{}{1.{15}}{}}{4}{Def.1.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bei}{{Example}{1.{16}}{Inhibitory Connections}}{4}{Def.1.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {Abs}{{}{1.{17}}{Predictive Coding I: The Generative Model}}{4}{Def.1.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {OP}{{Open Problem}{1}{Dependent consequences}}{5}{OP.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {OP}{{Open Problem}{2}{Stochastic Networks}}{5}{OP.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {Abs}{{}{1.{18}}{Predictive Coding II: Inference 1}}{5}{Def.1.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {Abs}{{}{1.{19}}{}}{5}{Def.1.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {Abs}{{}{1.{20}}{Transformations}}{5}{Def.1.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {Abs}{{}{1.{21}}{}}{5}{Def.1.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {OP}{{Open Problem}{3}{Degree of parallelity}}{6}{OP.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{1}}{States}}{6}{Def.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{2}}{State Function}}{6}{Def.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {Pro}{{Proposition}{2.{3}}{}}{6}{Def.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{2}{}}{7}{Bew.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {Abs}{{}{2.{4}}{}}{7}{Def.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {Pro}{{Proposition}{2.{5}}{}}{7}{Def.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{3}{}}{7}{Bew.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {Abs}{{}{2.{6}}{Free Energy in invariant functions}}{7}{Def.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {Abs}{{}{2.{7}}{Network State and Structure}}{8}{Def.2.7}

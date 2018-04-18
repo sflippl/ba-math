@@ -110,20 +110,20 @@ bindingoffset=0mm, top=20mm,bottom=15mm}
 \maketitle
 \tableofcontents
 \textbf{Open Problems: Overview}\\
-\listtheorems{OP}\\
+\listtheorems{OP}
 Neural networks are very general notions that encompass many different varieties. While there have been attempts to restrict make restrictions that are derived from their purpose (see, for instance, \cite{Guresen2011}), I argue that these restrictions make the definition more complicated to prove but not more powerful. Therefore, I provide a definition in the sense of \cite{Rojas1996}. However, I have attempted to make the notation more compact for my purposes and I have worked out the different aspects of neural networks more clearly. Finally, my definition is broader than Rojas' definition in \cite{Rojas1996}.
 \section{Structure of Neural Networks}
 \subsection{General Structure}
 \begin{Def}[Elementary Structure of Neural Networks]\label{def:neuralnets}
-A \emph{neural network} is defined by its \emph{elementary structure} which is a directed graph $(\mathcal{V},\mathcal{C}),\mathcal{C}\subseteq\mathcal{V}\times\mathcal{V}$, that is \emph{completely connected}.\\
+A \emph{neural network} is defined by its \emph{elementary structure} which is a directed graph $(\mathcal{V},\mathcal{C}),\mathcal{C}\subseteq\mathcal{V}\times\mathcal{V}$, that is \emph{connected}.\\
 We call the nodes in $\mathcal{V}$ \emph{Processing Units} (PU) und the edges in $\mathcal{C}$ \emph{Unit Connections} (UC). We will leave open the possibility to associate a class attribute with PUs or UCs that may restrict different network aspects (see, for instance, example \ref{ex:inhib}).
 \end{Def}
 \begin{Not}
 We associate $\mathcal{C}$ with the relations $\to_{\mathcal{C}}$ and $--_{\mathcal{C}}$ on $\mathcal{V}$, i. e.
 \begin{align}
 \begin{split}
-v\to w&\equiv(v,w)\in\mathcal{C}\equiv v\leftarrow w\\
-v--w&\equiv v\to w\vee w\to v
+v\to_{\mathcal{C}} w&\equiv(v,w)\in\mathcal{C}\equiv v\leftarrow_{\mathcal{C}} w\\
+v--_{\mathcal{C}}w&\equiv v\to_{\mathcal{C}} w\vee w\to_{\mathcal{C}} v
 \end{split}
 \end{align}
 Where the context is clear, we write $\to$ and $--$ instead of $\to_{\mathcal{C}}$ and $--_{\mathcal{C}}$.
@@ -147,14 +147,45 @@ If $u\in\mathcal{V}$ is a PUs we define the set of \emph{preceding} PUs
 \end{equation}
 and the set of \emph{succeeding} PUs
 \begin{equation}
-\mathcal{C}^u:=\left\{w\in\mathcal{V}|u\leftarrow w\right\}
+\mathcal{C}^u:=\left\{w\in\mathcal{V}|u\to w\right\}
 \end{equation}
 \end{Not}
-\begin{Def}[Acyclical Networks]
-The network $(\mathcal{V},\mathcal{C})$ is called \emph{acyclical} or \emph{feed-forward} if and only if the relation $\to$ is acyclical.
+\begin{Def}[Acyclic Networks]
+The network $(\mathcal{V},\mathcal{C})$ is called \emph{feed-forward} if and only if it is an acyclic graph.
 \end{Def}
+\begin{Def}
+$v\in\mathcal{V}$ is called a \emph{highest-level} PU (resp. \emph{lowest-level} PU) if and only if $\mathcal{C}_v=\emptyset$ (resp. $\mathcal{C}^v=\emptyset$).
+\end{Def}
+\begin{Pro}\label{pro:layerstruct}
+A finite feed-forward network $\mathcal{N}$ can be divided into $L$ layers, $L\in\mathbb{N}$ such that
+\begin{equation}\label{eq:layers-v}
+\mathcal{V}=\mathcal{V}^{(0)}\dot{\cup}\dotsb\cup\dot{\mathcal{V}^{(L)}}
+\end{equation}
+and
+\begin{equation}\label{eq:layers}
+v\to w\Rightarrow v\in\mathcal{V}^{(l_1)},w\in\mathcal{V}^{(l_2)}, l_1<l_2
+\end{equation}
+The minimal value of $L$ is called the \emph{depth} of $\mathcal{N}$ and can be found by the following algorithm: 1) Take the highest-level PUs of $\mathcal{C}$ and define them as $\mathcal{V}^{(0)}$. 2) Take the highest-level PUs of $\mathcal{C}$ without $\mathcal{V}^{(0)}$ and define them as $\mathcal{V}^{(1)}$. 3) Repeat this process until a partition of $\mathcal{V}$ has been found. The final layer number is the depth of $\mathcal{N}$.
+\end{Pro}
+\begin{Bew}
+Proof by induction on $|\mathcal{V}|$ over the proposition and the predicate concerning the depth $L$ of $\mathcal{V}$
+\begin{equation}\label{eq:layer-pred}
+P(\mathcal{V},L)\equiv\underset{v_1,\dotsc,v_L}{\exists}\underset{i=1,\dotsc,L-1}{\forall}v_i\to v_{i+1}
+\end{equation}
+Note that $P(\mathcal{V},L)$ proves that $L$ is the minimal number of layers as any number lower than $L$ could obviously not satisfy condition (\ref{eq:layers}).\\
+Suppose $|\mathcal{V}|=1$. As the network is feed-forward, $\mathcal{C}=\emptyset$ and (\ref{eq:layers}) is automatically true. $\mathcal{V}=\mathcal{V}^{(0)}$ produces the layered structure of $\mathcal{N}$.\\
+Suppose $|\mathcal{V}|=n$ and the proposition is proven for all $|\mathcal{V}|<n$. As the network is feed-forward, there is at least one lowest-level PU of $\mathcal{C}$. Define the set of lowest-level PUs as $\mathcal{V}^{(\max)}$. Then, the proposition and the predicate are proven for $\mathcal{V}':=\mathcal{V}\setminus\mathcal{V}^{(\max)}$. If the depth of $\mathcal{V}'$ is $L'$, the depth of $\mathcal{V}$ is $L:=L'+1$. The last step of the algorithm now corresponds to setting $\mathcal{V}^{(L)}:=\mathcal{V}^{(\max)}$.\\
+Obviously, (\ref{eq:layers-v}) holds true. We now prove (\ref{eq:layers}): if $l_2<L$, this is true by induction hypothesis. If $l_2=L$, $l_1<L=l_2$ because $v$ is not a lowest-level PU.\\
+Finally, $P(\mathcal{V},L)$ holds: by $P(\mathcal{V}',L')$ we can find $v_1,\dotsc,v_{L-1}$ such that (\ref{eq:layer-pred}) is satisfied. We know that there must be some $v_L\in\mathcal{V}$ such that $v_{L-1}\to v_L$ because $v_{L-1}$ is not a lowest-level PU and therefore $P(\mathcal{V},L)$.
+\end{Bew}
 \begin{Abs}
-The elementary structure of a neural network only specifies how the PUs are connected but not how they use these connections. With respect to this task, we have to differentiate between the \emph{network assumptions} that cannot be change during its applications and its \emph{parameters} that can be changed during learning (see section \ref{subsec:learning}). While specific values of the latter should not be considered as part of the network, the values they may take are as relevant as the way they parametrize the network.
+Many neural networks are structured into $L$ layers of PUs where $v_1^{(l)},\dotsc,v_{n_i}^{(l)}\in\mathcal{V}$ and $\mathcal{C}=\left\{(v_i^{(l)},v_j^{(l+1)})|l=0,\dotsc,L-1,i=1,\dotsc,n_l,j=1,\dotsc,n_{l+1}\right\}$ where input is provided to layer $0$ and the network produces some kind of output at layer $L$. It may helpful to use such a structure to visualize certain notions. However, as far as I see it, a general feed-forward architecture provides all the benefits of a layered structure which is supported by propositions \ref{pro:layerstruct} and \ref{pro:layerstate}.
+\end{Abs}
+\begin{Abs}
+More generally, we may analyze unit connections $(v,w)$ with respect to some layered structure (\ref{eq:layers-v}). If $v\in\mathcal{V}^{(l_1)},w\in\mathcal{V}^{(l_2)}$, we call $(v,w)$ \emph{feed-forward} if $l_1<l_2$, \emph{feedback} if $l_1>l_2$ and \emph{lateral} if $l_1=l_2$.
+\end{Abs}
+\begin{Abs}
+The elementary structure of a neural network only specifies how the PUs are connected but not how they use these connections. With respect to this task, we have to differentiate between the \emph{network assumptions} that cannot be change during its applications and its \emph{parameters} that can be changed during learning (see chapter \ref{ch:learning}). While specific values of the latter should not be considered as part of the network, the values they may take are as relevant as the way they parametrize the network.
 \end{Abs}
 \begin{Def}[Functional Structure]\label{def:integrate}
 We define the \emph{parameter space} $\Theta$ and the \emph{integrative functions} $\mathcal{G}=\left(g_u\right)_{u\in\mathcal{V}}$ where 
@@ -191,9 +222,159 @@ where $\theta^T$ is the transpose of $\theta$.
 In many neural networks all unit functions are provided by a unique function $f$. Most unit functions map their input to $(-1,1)$ or $(0,1)$. Popular choices are the sigmoid function $f(x)=\frac{1}{1+e^{-cx}}$ or the tangens hyperbolicus $f(x)=\tanh(x)$. If we define $f=\text{id}$, the resulting network provides a linear model.\\
 Finally, many neural networks work in layers: they are structured into $L$ layers of PUs where $v_1^{(l)},\dotsc,v_{n_i}^{(l)}\in\mathcal{V}$ and $\mathcal{C}=\left\{(v_i^{(l)},v_j^{(l+1)})|l=0,\dotsc,L-1,i=1,\dotsc,n_l,j=1,\dotsc,n_{l+1}\right\}$ where input is provided to layer $0$ and the network produces some kind of output at layer $L$. It may helpful to use such a structure to visualize certain notions. However, as far as I see it, a general feed-forward architecture provides all the benefits of a layered structure which may be justified by Proposition \ref{prop:feedforward to layered}.
 \end{Abs}
+\begin{Bei}[Inhibitory Connections]\label{ex:inhib}
+In the brain, we may distinguish between inhibitory and excitatory synaptic connections. In case of the latter, a firing presynaptic neuron increases postsynaptic firing, in case of the former, presynaptic firing decreases or inhibits postsynaptic firing. We may model this constellation by distinguishing between two classes $\mathcal{C}_i$ and $\mathcal{C}_e$ of connections and defining $\Theta\subseteq\mathbb{R}^{\mathcal{C}}$ such that $\theta_c\le0$ if $c\in\mathcal{C}_i$ and $\theta_c\ge0$ if $c\in\mathcal{C}_e$.
+\end{Bei}
 \subsection{Predictive Coding}
-\begin{Abs}[Predictive Coding I: The Generative Model]
-Predictive Coding serves as a model of how our brain processes sensations to perceptions and is based on \cite{Mumford1992}. It poses that our brain processes data by inferring hidden \emph{causes} which are, in this case, "simply the states of processes generating sensory data" \cite[][819]{Friston2005}.
+\begin{Abs}[Predictive Coding I: The Generative Model]\label{predcoding:generation}
+Predictive Coding serves as a model of how our brain processes sensations into perceptions and is based on \cite{Mumford1992}. It poses that our brain processes data by inferring hidden or perceptible \emph{causes} which are, in this case, "simply the states of processes generating sensory data" \cite[][819]{Friston2005}. Higher-level causes produce lower-level causes which, in turn produce sensory data. To quote Friston \cite{Friston2005}
+\begin{quote}
+It is not easy to ascribe meaning to these states without appealing to the way that we categorize things, either perceptually or conceptually. Causes may be categorical in nature, such as the identity of a face or the semantic category to which an object belongs. Others may be parametric, such as the position of an object.\cite[][819]{Friston2005}
+\end{quote}
+We can therefore define a \emph{generative model} that describes how causes relate to sensations by a feed-forward neural network $\mathcal{P}_{\text{gen}}:=\left(\mathcal{V}_P,\mathcal{C}_{\text{gen}}\right)$ where we may represent the process by the deterministic model
+\begin{equation}
+v=g_v(\mathcal{C}_v;\Theta)
+\end{equation}
+As we have no means of representing causes perfectly, we may want to model the outcomes stochastically. We would therefore posit a generative distribution
+\begin{equation}\label{predcoding:gendistr}
+p_v(v|\mathcal{C}_v;\Theta)
+\end{equation}
+for every $v\in\mathcal{V}$. For now, we will also assume that $v$ is independent from $\mathcal{V}\setminus\mathcal{C}_v$.
+\begin{OP}[Dependent consequences]
+How do we generalize predictive coding to dependent variables? Friston \cite{Friston2005} proposes a framework for decorrelating normal variables that is relatively straight-forward. I will need to extend that to general hierarchies (which should be easy using proposition \ref{pro:layerstruct}). How may we approach general dependence structures?
+\end{OP}
+It is an open question to me, whether this is a concern of structure or a concern of states (see chapter \ref{ch:states}).
+\begin{OP}[Stochastic Networks]
+Is randomness a structure or a state function? My current suggestion would be the former.
+\end{OP}
+Either way, the lowest-level PUs of $\mathcal{C}_{\text{gen}}$ correspond to the sensory input. While this may be a more accurate description of reality, our brain has no means of directly perceiving the hidden causes. We refer to this goal as \emph{inference} and it will be the subject of \ref{predcoding:inference1} and \ref{predcoding:inference2}.
 \end{Abs}
+\begin{Abs}[Predictive Coding II: Inference 1]\label{predcoding:inference1}
+I will conclude this section with some structural remarks on inference that may elucidate some previous connective notions. If we suppose a layered structure as in \ref{predcoding:generation}, then the generative  connections $\mathcal{C}_{\text{gen}}$ are obviously feed-forward. If we want to infer the hidden causes from the lower-level PUs starting with the sensory input, we would therefore have to define a feedback structure $\mathcal{C}_{\text{inf}}$. For reasons of simplicity, we will consider a slightly changed structure in \ref{predcoding:inference2}.
+\end{Abs}
+\subsection{Parallelity}
+\begin{Abs}
+One of the discerning characteristics of neural networks in comparison to other mechanisms of inference is their parallelity as we will discover in the next two paragraphs.
+\end{Abs}
+\begin{Abs}[Transformations]\label{artparallel}
+A huge amount of parallelity allows us to transform the input space. This is what happens in the case of predictive coding. We read out the pixel values of the visual input and infer abstract concepts like spatial orientation or even higher concepts like faces. This is only possible because of the massive amount of parallel processing in applied examples like artificial visual recognition systems (see \cite[][70-73]{Rojas1996}). This is also an important advantage for biological networks where the input to our retina is transformed to different characteristics like orientation or relative brightness (see \cite[][257-276]{Purves2012}). Indeed, predictive coding has been demonstrated to imitate some of the properties of the visual cortex \cite{Rao1999}. On the other hand, there are certain advantages to parallelity with respect to biological networks that do not directly extend to artificial networks which I will discuss in the next section (see \ref{bioparallel}).
+\end{Abs}
+\begin{Abs}
+For now the last paragraph may provide some proof that parallelity is indeed a useful property. On the other hand, a network that does not use parallel processing does not need to be formulated in the same framework. These considerations have led Guresen and Kayakutlu \cite{Guresen2011} to claim parallelity as a necessary feature of neural networks. In their proposed definition, they require that "at least two of the multiple [Processing Units are] connected in parallel" \cite[][428]{Guresen2011} because, they agure, "structures [...] with one or more [Processing Units] connected serially cannot be referred as [a neural network] because it will lose the power of parallel computing and starts to act more like existing computers than a brain" \cite[][428]{Guresen2011}.\\
+In principle, I agree with their point. I would argue, however, that it is not helpful to include such a criterion in the definition. After all, if there is one parallel pathway in a massive serial network, this would correspond to a neural network according to their notion even though the difference to a uniquely serial network is insubstantial.\\
+The definition therefore seems to raise an issue that cannot be resolved, analogous to the definition of a "heap of sand", another instance of the Sorites paradox (see \cite{Hyde2014}): without doubt, one grain of sand is necessary to have a heap but it is not sufficient and we can probably not find a hard definition of such a vague statement. We would be better advised to simply define the underlying property a "heap" refers to, i. e. the \emph{number} of grains of sand that allows us to use more rigorous notions.\\
+Comparably, parallel processing such that it is advantageous cannot be covered by such a broad definition -- not only does parallelity exist on a spectrum, it also strongly depends on the context. I would therefore suggest that an attempt to find a way to talk about parallelity may be more fruitful than Guresen and Kayakutlu's hard borders. I have not found the definition of a comparable \emph{degree of parallelity} and Guresen and Kayakutlu themselves also do not elaborate on what they mean by parallel connections.
+\begin{OP}
+[Degree of parallelity]
+How may we define the \emph{degree of parallelity} of a neural network?
+\end{OP}
+\end{Abs}
+\section{States of Neural Networks}\label{ch:states}
+\subsection{General States}
+\begin{Def}[States]\label{def:states}
+We call $s\in\mathbb{R}^{\mathcal{V}}$ a state of the network where we denote the state of the PU $v$ by $s(v)$ and the state of vector of PUs $\overline{v}=\begin{pmatrix}
+v_1&\dotsb&v_n
+\end{pmatrix}$ by $s(\overline{v})=\begin{pmatrix}
+s(v_1)&\dotsb&s(v_n)
+\end{pmatrix}$. $s$ is \emph{balanced} if and only if
+\begin{equation}\label{eq:balanced}
+\underset{u\in\mathcal{V}}{\forall}s(u)=g_u\left(s\left(\mathcal{C}_u\right)|\theta\right)
+\end{equation} 
+\end{Def}
+\begin{Def}[State Function]
+We call $T:\mathbb{R}^{\mathcal{I}}\to\mathbb{R}^{\mathcal{V}}$ a \emph{state function} where $\mathcal{I}\subseteq\mathcal{V}$ is the \emph{input}.\\
+A state function $T_{\text{step}}$ is called a \emph{state step} if and only if $\mathcal{I}=\mathcal{V}$ and 
+\begin{equation}\label{eq:step}
+\underset{u\in\mathcal{V}}{\forall}T(s)(u)=g_u\left(s(\mathcal{C}_u)|\theta\right)
+\end{equation}
+$T$ is called \emph{balanced} if and only if every $T(s)$ is balanced.\\
+$T$ is called \emph{invariant} in $\mathcal{J}\subseteq\mathcal{I}$ if and only if
+\begin{equation}
+\underset{j\in\mathcal{J}}{\forall}T(s)(j)=s(j)
+\end{equation}
+\end{Def}
+\begin{Pro}
+The balanced states are the fixed points of a state step of the network.
+\end{Pro}
+\begin{Bew}
+The fixed point equation for the state step corresponds exactly to (\ref{eq:balanced}).
+\end{Bew}
+\begin{Abs}
+The value attribution of neural networks is often defined together with their structure or even implicitly by their structure. As we will discover below, this is not a problem for feed-forward networks, however, recurrent networks lead to significant difficulties, both in terms of clear and concise notation. Distinguishing between state steps and balanced functions allows to describe, in separate terms, how the neural network updates its values (which should correspond directly to its structure in terms of (\ref{eq:step})) and what the result of these operations is.
+\end{Abs}
+\begin{Pro}
+A finite feed-forward network has a unique balanced state function
+\begin{equation}
+T:\mathbb{R}^{\mathcal{V}^{(0)}}\to\mathbb{R}^{\mathcal{V}}
+\end{equation}
+that is invariant in $\mathcal{I}$. It is defined recursively by
+\begin{align}\label{eq:unique-state}
+\begin{split}
+u\in\mathcal{V}^{(0)}&\Rightarrow T(s)(u)=s(u)\\
+u\notin\mathcal{V}^{(0)}&\Rightarrow T(s)(u)=g_u\left(T(s)(\mathcal{C}_u)|\theta\right)
+\end{split}
+\end{align}
+\end{Pro}
+\begin{Bew}
+The state function is well-defined because the network structure is acyclic. (\ref{eq:unique-state}) is equivalent to invariance and balancedness and therefore the reason for both existence and uniqueness.
+\end{Bew}
+\begin{Abs}[Free Energy in invariant functions]
+Many neural networks can be considered as structures that try to make sense of data. In this framework, every PU corresponds to some hidden or empirical property of the world and the network tries to infer the remaining states from a given input of states $i\in\mathbb{R}^{\mathcal{I}}$. This corresponds to a state function that is invariant in $\mathcal{I}$: the input corresponds to values that are true by observation and therefore may not be changed. We can describe the behaviour of such a network by a \emph{free energy function}
+\begin{equation}
+F:\mathbb{R}^{\mathcal{V}}\to\mathbb{R}
+\end{equation}
+where a low $F(s)$ hints at a calmer and therefore more probable state. A popular choice of $F$ is a (log-)likelihood function and a sensible invariant state function may be the \emph{global} optimum
+\begin{align}
+\begin{split}
+T_F^g:\mathbb{R}^{\mathcal{I}}&\to\mathbb{R}^{\mathcal{V}}\\
+T_F^g(i)(\mathcal{I})&:=i\\
+T_F^g(i)(\mathcal{V}\setminus\mathcal{I})&:=\arg\min_{s\in\mathbb{R}^{\mathcal{V}\setminus\mathcal{I}}}F\begin{pmatrix}
+s\\i
+\end{pmatrix}
+\end{split}
+\end{align}
+We often consider as state step a gradient descent
+\begin{equation}
+T_F^{\text{step},\alpha}:\mathbb{R}^{\mathcal{V}}\to\mathbb{R}^{\mathcal{V}}\qquad T_F^{\text{step},\alpha}\begin{pmatrix}
+s\\i
+\end{pmatrix}:=\begin{pmatrix}
+s+\alpha\frac{\partial F}{\partial s}\begin{pmatrix}
+s\\i
+\end{pmatrix}\\i
+\end{pmatrix}
+\end{equation}
+and as state function some iterative application of gradient descent, for instance
+\begin{equation}
+T_F^{\lim,\alpha}:\mathbb{R}^{\mathcal{I}}\to\mathbb{R}^{\mathcal{V}}\qquad T_F^{\lim,\alpha}(i):=\lim_{n\to\infty}\left(T_F^{\text{step},\alpha}\right)^n\circ\text{In}_s
+\end{equation}
+where we initialize the gradient descent by some values $s\in\mathbb{R}^{\mathcal{V}\setminus\mathcal{I}}$
+\begin{equation}
+\text{In}_s:\mathbb{R}^{\mathcal{I}}\to\mathbb{R}^{\mathcal{V}}\qquad \text{In}(i):=\begin{pmatrix}
+s\\i
+\end{pmatrix}
+\end{equation}
+\end{Abs}
+\begin{Abs}[Network State and Structure]
+Regardless of these applied questions, the general considerations demonstrate an important principle: while we have formally defined state functions on top of a network structure, these considerations often precede specification of functional or even general structure. In this context, balancedness is more a property of a network structure than of a state function. (Of course, $T_F^{\lim,\alpha}$ is only balanced for an appropriately defined structure if $T_F{\text{step},\alpha}$ has a fixed point it reaches by repeated application.) This is also the natural order of considerations in the following section where I will introduce predictive coding as a free energy approach.
+\end{Abs}
+%\subsection{Predictive Coding}
+%\begin{Abs}[Predictive Coding II: Inference 2]\label{predcoding:inference2}
+%Within the framework of \ref{predcoding:generation}, consider some consequence $u$ and its higher-level causes $\mathcal{C}_u$. According to the assumptions (\ref{predcoding:gendistr}) we would expect a state $s(u)$ to follow the distribution $p_u(u|\mathcal{C}_u;\theta)$ where we consider $\theta$ to be fixed. However, we know $s(u)$ and try to infer $s(\mathcal{C}_u)$. We therefore face an inversion problem. According to Bayes' Theorem
+%\begin{equation}
+%p_{\mathcal{C}_u}\left(s(\mathcal{C}_u)|s(u);\theta\right)\propto p_u\left(s(u)|s(\mathcal{C}_u);\theta\right)p_{\mathcal{C}_u}\left(s(\mathcal{C}_u);\theta\right)
+%\end{equation}
+%While we know the generative model $p_u$ the prior distribution $p_{\mathcal{C}_u}$ is not generally known. In a statistical framework we often use some kind of regularization prior that anchors the hidden values around 0. This is hard to justify in the biological context predictive coding aims to imitate. We therefore construct the prior of every $v\in\mathcal{C}_u$ from the higher-level PUs $\mathcal{C}_v$ or, if $v$ is a highest-level PU, use a flat prior. This is gives us a method to describe the joint likelihood $L$ of all PUs where the notion of a flat prior leads to 
+%\begin{equation}
+%L(s(\mathcal{V})|\theta)=p_{\mathcal{V}}(s(\mathcal{V})|\theta)=p_{\mathcal{V}^{(<L)}}(s(\mathcal{V}^{(<L)})|s(\mathcal{V}^{(L)});\theta)
+%\end{equation}
+%I will note that I use the notation $\mathcal{V}^{(<l)}:=\bigcup_{k=0}^{l-1}\mathcal{V}^{(k)}$ and $\mathcal{V}^{(\ge l)}:=\mathcal{V}\setminus\mathcal{V}^{(<l)}$. We can now conclude
+%\[
+%L(s(\mathcal{V})|\theta)=\prod_{k=1}^Lp_{\mathcal{V}^{(k)-1}}\left(s(\mathcal{V}^{(k-1)})|s(\mathcal{V}^{(\ge k)});\theta\right)
+%\]
+%According to the independence assumption,
+%\[
+%p_{\mathcal{V}^{(k)}\left(s(\mathcal{V}^{(k)})|s(\mathcal{V}^{(\ge k)});\theta\right)=\prod_{v\in\mathcal{V}^{(k)}}p_v\left(s(v)|s(\mathcal{C}^v)\right)
+%\]
+%\end{Abs}
 \printbibliography
 \end{document}

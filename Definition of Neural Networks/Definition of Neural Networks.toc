@@ -6,6 +6,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.1}General Structure}{1}{subsection.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2}Additive neural networks}{2}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.2}Additive neural networks}{3}{subsection.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3}Predictive Coding}{3}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.3}Predictive Coding}{4}{subsection.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.4}Parallelity}{5}{subsection.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}States of Neural Networks}{6}{section.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}General States}{6}{subsection.2.1}

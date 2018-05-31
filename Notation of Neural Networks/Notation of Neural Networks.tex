@@ -1,0 +1,207 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage[svgnames]{xcolor}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb,textcomp}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{chemfig} % Independence sets
+\usepackage[backend=bibtex,
+style=numeric,
+bibencoding=ascii
+%style=alphabetic
+%style=reading
+]{biblatex}
+\addbibresource{C:/Users/samue/Documents/Mathematik-BA_Mathe.bib}
+
+
+\geometry{
+left=20mm,right=20mm,%
+bindingoffset=0mm, top=20mm,bottom=15mm}
+
+\hypersetup{
+    bookmarksnumbered=true,
+    bookmarksopen=false,
+    bookmarksopenlevel=1,
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=DarkBlue,
+    citecolor=DarkRed
+}
+
+\newcommand{\figur}[5][0]{
+		\begin{figure}[H] \centering \em %H / h!
+			\includegraphics[width=#5\textwidth, angle=#1]{#2}
+			\caption{#3}\label{fig:#4}
+		\end{figure}
+}
+
+\linespread{1.3}
+
+\newcommand{\linia}{\rule{\linewidth}{0.5pt}}
+
+% my own titles
+
+%%%
+
+\newcommand{\const}{\varsigma}
+\newcommand{\var}{\chi}
+
+% custom footers and headers
+\usepackage{fancyhdr,lastpage}
+\pagestyle{headings}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\usepackage[thref,thmmarks,amsmath,framed,hyperref]{ntheorem}
+\hbadness=10001
+\hfuzz=1000pt
+\makeatletter\let\Author\@author\makeatother
+\author{Samuel Lippl}
+\title{Notation of Neural Networks}
+\begin{document}
+\renewcommand{\abstractname}{\vspace{-\baselineskip}}
+\theoremstyle{change} %Nummer vor Theoremtitel
+\theoremheaderfont{\normalfont\scshape}
+\theoremseparator{.}
+\theorembodyfont{\normalfont}
+\newtheorem{Def}{Definition}[section]
+\newtheorem{The}[Def]{Theorem}
+\newtheorem{Lem}[Def]{Lemma}
+\newtheorem{Pro}[Def]{Proposition}
+\newtheorem{Kor}[Def]{Korollar}
+\newtheorem{Bem}[Def]{Bemerkung}
+\newtheorem{Not}[Def]{Notation}
+\newtheorem{Bei}[Def]{Example}
+\newtheorem{Ax}[Def]{Axiom}
+\newtheorem{Con}[Def]{Condition}
+\newtheorem{Hyp}[Def]{Hypothesis}
+\newtheorem{OP}{Open Problem}
+\theoremseparator{}
+\newtheorem{Abs}[Def]{}
+\theoremstyle{nonumberplain}
+\theoremheaderfont{\normalfont\itshape}
+\theoremsymbol{$\square$}
+\theoremseparator{.}
+\newtheorem{Bew}{Proof}
+%Lange Beweise enthalten oft Lemmata oder einzelne Teilbeweise kleinere Behauptungen. Diese werden wir Hilfslemmata nennen. Der Hauptunterschied zwischen Lemmata und Hilfslemmata ist, das Hilfslemmata spezifisch zum Theorem gehören und griechisch numeriert sind, während Lemmata unabhängig von diesem sind.
+\theoremstyle{change}
+\theoremindent1cm
+\theoremseparator{.}
+\theoremsymbol{}
+\theoremheaderfont{\normalfont\scshape}
+\newtheorem{BLem}[Def]{Lemma}
+\theoremstyle{plain}
+\theoremindent1cm
+\theoremseparator{.}
+\theoremnumbering{greek}
+\theoremheaderfont{\normalfont\itshape}
+\newtheorem{HLem}{Sublemma}[Def]
+\newtheorem{BAbs}[HLem]{}
+\theoremstyle{nonumberplain}
+\theoremindent1cm
+\theoremseparator{.}
+\theoremheaderfont{\normalfont\itshape}
+\theoremsymbol{$\triangle$}
+\newtheorem{BBew}{Proof}
+\maketitle
+\tableofcontents
+%\textbf{Open Problems: Overview}\\
+\listtheorems{OP}
+While the choice of a specific notation is mathematically irrelevant, a notation that is
+\begin{itemize}
+\item
+concise (so that it is as easy as possible to write and read)
+\item
+consistent (so that there is no confusion) and
+\item
+clear (where every building block of the system is where one would expect it; this has a lot to do with consistency)
+\end{itemize}
+is obviously important. In this document, I propose a notation that attempts to suffice these criteria. If some tweak turns out to be superior, I will change the document.
+\paragraph{Building Blocks}
+As the elementary building blocks of a neural network the \textbf{Processing Units}/Nodes ($u,v,w,\dotsc$) and the \textbf{Unit Connections}/Edges ($c=(v,w)=v\to w$) do not need any subscripts -- a simply symbol suffices where $v\to w$ is used both to reference $(v,w)$ and to notate that $(v,w)\in\mathcal{C}$. These notations are also acceptable for sets of PUs/UCs.\\
+The \textbf{preceding} (resp. \textbf{subsequent}) PUs are written as $\to v$ (resp. $v\to$).\\
+The \textbf{weights} of a UC $c$ are written as $\theta_c=\theta_{v\to w}$. We may also use sets of PUs: $\theta_V\equiv\left(\theta\right)_{v\in V}$. We will identify $v\to\equiv\left(v\to w\right)_{w\in v\to}$ where it will become clear from context whether we mean PUs or UCs. We will therefore use that notation $\theta_{v\to},\theta_{\to v}$.\\
+Generally, nodes are written in brackets, if we look at a \textbf{state} $s$, the state of a particular PU $v$ if written as $s(v)$. Again, $s(V)\equiv\left(s(v)\right)_{v\in V}$. We mostly use the letters $s$, $i$ (for an input state) or $o$ (for an output). States are generally used as a superscript.\\
+General \textbf{network functions} are now written as $N^i_{\theta}$ where $i$ is their input. They map to states, i. e. $N^i_{\theta}(v)$ denotes the state of PU $v$. If there is a set of output PUs $v^{O}$ (normally $v^{(L)}$), we write $N^i_{\theta}(v)\equiv O^i_{\theta}(v)$. If we want to talk about the function that maps input to states (resp. real numbers) we write $N^{\cdot}_{\theta}$ (resp. $N^{\cdot}_{\theta}(v)$).\\
+\textbf{Unit Functions} are the only context in which we use PUs as subscripts: $f_v,g_v,f_{\to v}\equiv\left(f_w\right)_{w\in(\to v)},\dotsc$\\
+We denote \textbf{learning functions} by writing the current weights $\theta$ in brackets: $L^i(\theta)$ where $i$ is the input or, if it is a learning function that makes a difference between input and output, we may clarify that by $L^{i;o}(\theta)$. As the domain is the weights domain $L^{i;o}_c(\theta)$ references a newly updated weight.
+\paragraph{Entire networks} The notations above do not yet provide a concise notation for an entire network. Generally, we will write networks as $\mathcal{N}$ but specific networks may be written with fitting letters, for instance: $\mathcal{B}$ (for a backpropagation network) or $\mathcal{P}$ (for a predictive coding network). The only necessary parts of a network are PUs and UCs: $\mathcal{N}=(\mathcal{V},\mathcal{C})$. We may also use a matrix notation which requires some preliminary work.\\
+The goal is to denote both the weights and the network structure by a matrix $\theta$ where the rows and columns are indexed by the set of PUs $\mathcal{V}$. However, in order to be able to learn, the matrix would need to save information on which connections are able to be trained. This applies both to constantly weighted UCs and to PUs that are not connected and therefore have the weight $0$. On the other hand, we would like to denote the network's structure even in situations where we have not obtained some of the weights yet. My proposed solution is the following:
+\begin{Not}
+We define
+\begin{equation}
+\mathbb{R}_{\const,\var}:=\left(\mathbb{R}\times\left\{\const,\var\right\}\right)\cup\left\{\var\right\}
+\end{equation}
+where we denote for any $r\in\mathbb{R}$
+\begin{equation}
+r_{\const}\equiv(1,\const)\qquad r\equiv r_{\var}\equiv(1,\var)
+\end{equation}
+We may omit $0_{\const}$ but not $0$ and use $\chi_1,\dotsc,\chi_k$ to denote different classes of UCs. As $\chi$ simply represents a parameter that is not specified, we will mostly simply write that parameter $\theta_c$.
+\end{Not}
+\begin{Abs}[Matrix Notation of Neural Networks]
+In the matrix notation, we specify neural networks by a weight matrix $\theta\in\mathbb{R}_{\const,\var}^{\mathcal{V}\times\mathcal{V}}$ where $\theta_{i,j}$ specifies a connection from $i$ to $j$, i. e.:
+\begin{equation}
+W=\begin{pmatrix}
+\theta_{v_1\to v_1}&\dotsb&\theta{v_1\to v_n}\\
+\vdots&\ddots&\vdots\\
+\theta_{v_n\to v_1}&\dotsb&\theta{v_n\to v_n}
+\end{pmatrix}
+\end{equation}
+Everything but $0_{\const}$ specifies a connection where the constant values denote constant edges while $r_{\var}$ denotes a current value of a parameter and $\var$ specifies that PUs are connected by a parameter with no current value.
+\end{Abs}
+\begin{Not}[Execution of a function]
+We define
+\begin{equation}
+f\vartriangleright (x_i)_{i\in I}\equiv \left(f(x_i)\right)_{i\in I}\equiv (x_i)_{i\in I}\vartriangleleft f\qquad (f_i)_{i\in I}\blacktriangleright (x_i)_{i\in I}\equiv\left(f_i(x_i)\right)_{i\in I}\equiv (x_i)_{i\in I}\blacktriangleleft (f_i)_{i\in I}
+\end{equation}
+\end{Not}
+\begin{Not}[Pairwise multiplication]
+\begin{equation}
+(x_i)_{i\in I}\circ(y_i)_{i\in I}\equiv (x_iy_i)_{i\in I}
+\end{equation}
+\end{Not}
+\begin{Abs}[Step Function in matrix notation]
+We may now notate the step function as
+\begin{equation}
+T(s):=\theta f\vartriangleright s
+\end{equation}
+\end{Abs}
+\begin{Not}[Recursive Definitions]
+We use $\downharpoonleft$ to make recursive definitions more concise. If we have a lower triagonal matrix (e. g. a feedforward network) $W\in\mathbb{R}^{n\times n}$, we may define a matrix
+\begin{equation}
+R:=Wr\downharpoonleft
+\end{equation}
+where $r\in\mathbb{R}^k$ and $W$ must have at least $k$ rows of zeros. Then, $R$ is initialized in the first $k$ rows by $r$ and then recursively defined by $W$:
+\begin{align}
+R_i:=\begin{cases}
+r_i&i\le k\\
+W_{i\cdot}\left(\begin{smallmatrix}
+r_1\\
+\vdots\\
+r_{i-1}\\
+0\\
+\vdots\\
+0
+\end{smallmatrix}\right)&k<i\le n
+\end{cases}
+\end{align}
+If $W$ is an upper triagonal matrix, we may also write
+\begin{equation}
+R:=Wr\upharpoonleft
+\end{equation}
+with the corresponding definition.\\
+I will also extend this notation to expressions like
+\begin{equation}\label{state-matrix}
+Wf\vartriangleright i\downharpoonleft
+\end{equation}
+\end{Not}
+\begin{Abs}
+(\ref{state-matrix}) describes the canonical state function where $i=\mathcal{V}^{(0)}$.
+\end{Abs}
+\end{document}

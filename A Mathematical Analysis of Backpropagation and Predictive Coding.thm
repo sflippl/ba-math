@@ -1,0 +1,244 @@
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{1}}{Neural Networks as Graphs}}{3}{Par.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{2}}{$\const $-$\var $-extension of a set}}{3}{Par.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{3}}{$\const $-$\var $-extension of a function}}{4}{Par.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{4}}{Passive Extension}}{4}{Par.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{5}}{Active Extension}}{4}{Par.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{6}}{Adjacency Matrix}}{4}{Par.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{7}}{Graph Relations}}{5}{Par.2.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{8}}{Connected Graph}}{5}{Par.2.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{9}}{Neural Network I: Topological Structure}}{5}{Par.2.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{10}}{}}{5}{Par.2.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {Not}{{Notation}{2.{11}}{Adjacency Matrix}}{5}{Par.2.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {Not}{{Notation}{2.{12}}{}}{5}{Par.2.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{13}}{Neural Network II: Functional Structure}}{5}{Par.2.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{14}}{Integrative Functions}}{5}{Par.2.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{15}}{Unit Functions}}{5}{Par.2.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{16}}{Additive Neural Networks}}{5}{Par.2.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{17}}{}}{6}{Par.2.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{18}}{Layers of Neural Networks}}{6}{Par.2.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {Not}{{Notation}{2.{19}}{}}{6}{Par.2.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{20}}{Feedforward Neural Networks}}{6}{Par.2.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {Pro}{{Proposition}{2.{21}}{Characterization of feedforward neural networks}}{6}{Par.2.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{1}{}}{6}{Bew.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{22}}{}}{7}{Par.2.22}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{23}}{Layerization}}{7}{Par.2.23}
+\defcounter {refsection}{0}\relax 
+\contentsline {Pro}{{Proposition}{2.{24}}{}}{7}{Par.2.24}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{2}{}}{7}{Bew.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{25}}{}}{8}{Par.2.25}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{26}}{}}{8}{Par.2.26}
+\defcounter {refsection}{0}\relax 
+\contentsline {Lem}{{Lemma}{2.{27}}{}}{8}{Par.2.27}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{3}{}}{8}{Bew.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{28}}{}}{8}{Par.2.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {Lem}{{Lemma}{2.{29}}{}}{8}{Par.2.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{4}{}}{8}{Bew.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{30}}{}}{8}{Par.2.30}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{31}}{}}{8}{Par.2.31}
+\defcounter {refsection}{0}\relax 
+\contentsline {Lem}{{Lemma}{2.{32}}{}}{8}{Par.2.32}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{5}{}}{8}{Bew.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {Pro}{{Proposition}{2.{33}}{Depth of Layerizations}}{8}{Par.2.33}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{6}{}}{8}{Bew.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {The}{{Theorem}{2.{34}}{Standardized Layerization}}{9}{Par.2.34}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{7}{}}{9}{Bew.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {Cor}{{Corollary}{2.{35}}{}}{9}{Par.2.35}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{8}{}}{9}{Bew.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {Cor}{{Corollary}{2.{36}}{}}{10}{Par.2.36}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{37}}{}}{10}{Par.2.37}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{38}}{Stochastic Networks}}{10}{Par.2.38}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{39}}{Predictive Coding I: The Generative Model}}{10}{Par.2.39}
+\defcounter {refsection}{0}\relax 
+\contentsline {Not}{{Notation}{2.{40}}{}}{11}{Par.2.40}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{41}}{}}{11}{Par.2.41}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{42}}{Generative Models}}{11}{Par.2.42}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{43}}{Normal Generative Model}}{11}{Par.2.43}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{44}}{}}{11}{Par.2.44}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{45}}{}}{12}{Par.2.45}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{46}}{Parallelity}}{12}{Par.2.46}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{47}}{}}{12}{Par.2.47}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{48}}{States}}{12}{Par.2.48}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{49}}{Input and Output Values}}{13}{Par.2.49}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{50}}{Extended States}}{13}{Par.2.50}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{51}}{State Functions}}{13}{Par.2.51}
+\defcounter {refsection}{0}\relax 
+\contentsline {Not}{{Notation}{2.{52}}{Defining state functions}}{13}{Par.2.52}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{53}}{Special State Functions}}{13}{Par.2.53}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{54}}{Balancedness}}{13}{Par.2.54}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{55}}{Canonical State Functions}}{14}{Par.2.55}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{56}}{Convention: Real Neural Networks}}{14}{Par.2.56}
+\defcounter {refsection}{0}\relax 
+\contentsline {Lem}{{Lemma}{2.{57}}{Fixed States}}{14}{Par.2.57}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{9}{}}{14}{Bew.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{58}}{Constant Values and Network Functions}}{14}{Par.2.58}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{59}}{Implementations}}{14}{Par.2.59}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{60}}{}}{15}{Par.2.60}
+\defcounter {refsection}{0}\relax 
+\contentsline {Pro}{{Proposition}{2.{61}}{}}{15}{Par.2.61}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{10}{}}{15}{Bew.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{62}}{}}{15}{Par.2.62}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{63}}{Predictive Coding II: The Free Energy Function}}{16}{Par.2.63}
+\defcounter {refsection}{0}\relax 
+\contentsline {Pro}{{Proposition}{2.{64}}{Free Energy in the Normal Generative Model}}{16}{Par.2.64}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{11}{}}{16}{Bew.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{65}}{Predictive Coding III: Inference}}{17}{Par.2.65}
+\defcounter {refsection}{0}\relax 
+\contentsline {Not}{{Notation}{2.{66}}{Derivatives of and in Vectors and Matrices}}{17}{Par.2.66}
+\defcounter {refsection}{0}\relax 
+\contentsline {Lem}{{Lemma}{2.{67}}{Gradient Descent in a Normal Generative Model}}{17}{Par.2.67}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{12}{}}{17}{Bew.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{68}}{}}{17}{Par.2.68}
+\defcounter {refsection}{0}\relax 
+\contentsline {Cor}{{Corollary}{2.{69}}{Gradient Descent in an Additive Normal Generative Model}}{17}{Par.2.69}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{13}{}}{18}{Bew.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {The}{{Theorem}{2.{70}}{Additive Normal Predictive Coding Network}}{18}{Par.2.70}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{71}}{}}{18}{Par.2.71}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{14}{of \thref {the:add-predicode}}}{18}{Bew.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {Lem}{{Lemma}{2.{72}}{}}{19}{Par.2.72}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{15}{}}{19}{Bew.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{73}}{}}{20}{Par.2.73}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{74}}{}}{20}{Par.2.74}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{75}}{Learning Structure}}{20}{Par.2.75}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{76}}{}}{20}{Par.2.76}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{77}}{Learning by Gradient Descent}}{20}{Par.2.77}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{78}}{}}{21}{Par.2.78}
+\defcounter {refsection}{0}\relax 
+\contentsline {The}{{Theorem}{2.{79}}{Backpropagation}}{21}{Par.2.79}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{16}{}}{21}{Bew.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{80}}{}}{22}{Par.2.80}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{81}}{Predictive Coding IV: Learning Perspectives}}{22}{Par.2.81}
+\defcounter {refsection}{0}\relax 
+\contentsline {The}{{Theorem}{2.{82}}{Learning $\xi $}}{22}{Par.2.82}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{17}{}}{22}{Bew.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {The}{{Theorem}{2.{83}}{Learning $\lambda '$}}{23}{Par.2.83}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{18}{}}{23}{Bew.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{84}}{Biological Plausibility I: The Hebbian Postulate}}{24}{Par.2.84}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{85}}{Local and Hebbian Learning}}{24}{Par.2.85}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{86}}{Biological Plausibility II: Backpropagation and Predictive Coding}}{24}{Par.2.86}
+\defcounter {refsection}{0}\relax 
+\contentsline {Lem}{{Lemma}{2.{87}}{}}{25}{Par.2.87}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{19}{}}{25}{Bew.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{88}}{}}{25}{Par.2.88}
+\defcounter {refsection}{0}\relax 
+\contentsline {Pro}{{Proposition}{2.{89}}{}}{25}{Par.2.89}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{20}{}}{25}{Bew.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {Par}{{}{2.{90}}{Biological Plausibility III: Enforcing Backpropagation}}{26}{Par.2.90}
+\defcounter {refsection}{0}\relax 
+\contentsline {Lem}{{Lemma}{A.{1}}{}}{31}{Par.a.A.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{21}{}}{31}{Bew.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {Lem}{{Lemma}{A.{2}}{}}{31}{Par.a.A.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{22}{}}{31}{Bew.22}
+\defcounter {refsection}{0}\relax 
+\contentsline {Lem}{{Lemma}{A.{3}}{Product Rule}}{31}{Par.a.A.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{23}{}}{31}{Bew.23}
+\defcounter {refsection}{0}\relax 
+\contentsline {Lem}{{Lemma}{A.{4}}{}}{31}{Par.a.A.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{24}{}}{32}{Bew.24}
+\defcounter {refsection}{0}\relax 
+\contentsline {Lem}{{Lemma}{A.{5}}{Chain Rule for matrix-valued functions}}{32}{Par.a.A.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{25}{}}{32}{Bew.25}
+\defcounter {refsection}{0}\relax 
+\contentsline {Lem}{{Lemma}{A.{6}}{Jacobi's Formula}}{32}{Par.a.A.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{26}{}}{32}{Bew.26}

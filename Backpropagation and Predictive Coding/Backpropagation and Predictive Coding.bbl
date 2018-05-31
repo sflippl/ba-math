@@ -1,0 +1,201 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{nty/global/}
+  \entry{Bogacz2017}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BR}{%
+         family={Bogacz},
+         familyi={B\bibinitperiod},
+         given={Rafal},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BR1}
+    \strng{fullhash}{BR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{pages}{198\bibrangedash 211}
+    \field{title}{{A tutorial on the free-energy framework for modelling
+  perception and learning}}
+    \field{volume}{76}
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/Downloads/Papers/A tutorial on the free-e
+    \verb nergy framework for modelling perception and learning.pdf:pdf
+    \endverb
+    \field{journaltitle}{Journal of Mathematical Psychology}
+    \field{year}{2017}
+  \endentry
+
+  \entry{Dempster1977}{article}{}
+    \name{author}{3}{}{%
+      {{hash=DAP}{%
+         family={Dempster},
+         familyi={D\bibinitperiod},
+         given={A.\bibnamedelima P.},
+         giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=LNM}{%
+         family={Laird},
+         familyi={L\bibinitperiod},
+         given={N.\bibnamedelima M.},
+         giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=RDB}{%
+         family={Rubin},
+         familyi={R\bibinitperiod},
+         given={D.\bibnamedelima B.},
+         giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DAPLNMRDB1}
+    \strng{fullhash}{DAPLNMRDB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{number}{1}
+    \field{pages}{1\bibrangedash 38}
+    \field{title}{{Maximum Likelihood from Incomplete Data via the EM
+  Algorithm}}
+    \field{volume}{39}
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/AppData/Local/Mendeley Ltd./Mendeley Desk
+    \verb top/Downloaded/Dempster, Laird, Rubin - 1977 - Maximum Likelihood fro
+    \verb m Incomplete Data via the EM Algorithm.pdf:pdf;:C$\backslash$:/Users/
+    \verb samue/Downloads/Papers/Dempster77.pdf:pdf
+    \endverb
+    \field{journaltitle}{Journal of the Royal Statistical Society. Series B
+  (Methodological)}
+    \field{annotation}{%
+    Read section 2 on exponential families.%
+    }
+    \field{year}{1977}
+  \endentry
+
+  \entry{Friston2005}{article}{}
+    \name{author}{1}{}{%
+      {{hash=FK}{%
+         family={Friston},
+         familyi={F\bibinitperiod},
+         given={Karl},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \keyw{bayesian,cortical,generative models,hierarchical,inference,predictive
+  coding}
+    \strng{namehash}{FK1}
+    \strng{fullhash}{FK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \verb{doi}
+    \verb 10.1098/rstb.2005.1622
+    \endverb
+    \field{pages}{815\bibrangedash 836}
+    \field{title}{{A theory of cortical responses}}
+    \field{volume}{360}
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/Downloads/Papers/815.full.pdf:pdf
+    \endverb
+    \field{journaltitle}{Philosophical Transactions of the Royal Society B}
+    \field{year}{2005}
+  \endentry
+
+  \entry{Whittington2017}{article}{}
+    \name{author}{2}{}{%
+      {{hash=WJCR}{%
+         family={Whittington},
+         familyi={W\bibinitperiod},
+         given={James C.\bibnamedelima R.},
+         giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim
+  R\bibinitperiod},
+      }}%
+      {{hash=BR}{%
+         family={Bogacz},
+         familyi={B\bibinitperiod},
+         given={Rafal},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WJCRBR1}
+    \strng{fullhash}{WJCRBR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{abstract}{%
+    To efficiently learn from feedback, cortical networks need to update
+  synaptic weights onmultiple levels of cortical hierarchy.Aneffective and
+  well-known algorithm for computing such changes in synaptic weights is the
+  error backpropagation algorithm. However, in this algorithm, the change in
+  synaptic weights is a complex function of weights and activities of neurons
+  not directly connected with the synapse being modified, whereas the changes
+  in biological synapses are determined only by the activity of presynaptic and
+  postsynaptic neurons. Several models have been proposed that approximate the
+  backpropagation algorithmwith local synaptic plasticity, but these models
+  require complex external control over the network or relatively complex
+  plasticity rules. Hereweshowthat a network developed in the predictive coding
+  framework can efficiently perform supervised learning fully autonomously,
+  employing only simple localHebbian plasticity. Furthermore, for certain
+  parameters, the weight change in the predictive codingmodel converges to that
+  of the backprop- agation algorithm. This suggests that it is possible for
+  cortical networks with simple Hebbian synaptic plasticity to implement
+  efficient learning algorithms in which synapses in areas on multiple levels
+  of hierarchy are modified to minimize the error on the output.%
+    }
+    \verb{doi}
+    \verb 10.1162/NECO
+    \endverb
+    \verb{eprint}
+    \verb 1706.02451
+    \endverb
+    \field{isbn}{0899-7667}
+    \field{issn}{1530888X}
+    \field{pages}{1229\bibrangedash 1262}
+    \field{title}{{An Approximation of the Error Backpropagation Algorithm in a
+  Predictive Coding Network with Local Hebbian Synaptic Plasticity}}
+    \verb{url}
+    \verb http://arxiv.org/abs/1706.02451
+    \endverb
+    \field{volume}{29}
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/Downloads/Papers/Error Backpropagation Al
+    \verb gorithm.pdf:pdf
+    \endverb
+    \field{journaltitle}{Neural Computation}
+    \field{annotation}{%
+    Topic: Simple Hebbian model approximates neural network error
+  backpropagation. Two classes of biological supervised learning: stochastic
+  neurons and synapses receiving a global feedback signal (via a neuromodulator
+  (long-term neurotransmitter)) - often does not approximate backpropagation
+  and scales poorly. Explicitly approximates backpropagation. Predictive coding
+  framework uses additional nodes that encode the difference between the
+  activity and the predicted activity on a certain level. In Artifical Neural
+  Networks, node correction is obtained by a global error estimate that can be
+  computed via backpropagation. The errors could as well be included as
+  separate nodes.%
+    }
+    \field{eprinttype}{arXiv}
+    \field{year}{2017}
+  \endentry
+\endsortlist
+\endinput

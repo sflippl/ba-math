@@ -1,0 +1,637 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{none/global/}
+  \entry{Sejnowski1988}{article}{}
+    \name{author}{3}{}{%
+      {{hash=STJ}{%
+         family={Sejnowski},
+         familyi={S\bibinitperiod},
+         given={Terrence\bibnamedelima J},
+         giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=KC}{%
+         family={Koch},
+         familyi={K\bibinitperiod},
+         given={Christof},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=CPS}{%
+         family={Churchland},
+         familyi={C\bibinitperiod},
+         given={Patricia\bibnamedelima S},
+         giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{STJ+1}
+    \strng{fullhash}{STJKCCPS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1126/science.3045969
+    \endverb
+    \field{number}{4871}
+    \field{pages}{1299\bibrangedash 1306}
+    \field{title}{{Computational Neuroscience}}
+    \field{volume}{241}
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/Documents/Studium/Literatur/Science/1988/
+    \verb Sejnowski, Koch, Churchland{\_}1988{\_}Computational Neuroscience.pdf
+    \verb :pdf
+    \endverb
+    \field{journaltitle}{Science}
+    \field{year}{1988}
+  \endentry
+
+  \entry{Box1976}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BGEP}{%
+         family={Box},
+         familyi={B\bibinitperiod},
+         given={George E.\bibnamedelima P.},
+         giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim
+  P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BGEP1}
+    \strng{fullhash}{BGEP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Aspects of scientific method are discussed: In particular, its
+  repre-sentation as a motivated iteration in which, in succession, practice
+  confronts theory, and theory, practice. Rapid progress requires suffi-cient
+  flexibility to profit from such confrontations, and the ability to devise
+  parsimonious but effective models, to worry selectively about model
+  inadequacies and to employ mathematics skillfully but appropriately. The
+  development of statistical methods at Rothamsted Experimental Station by Sir
+  Ronald Fisher is used to illustrate these themes.%
+    }
+    \field{isbn}{0006-3568}
+    \field{issn}{00034819}
+    \field{number}{356}
+    \field{pages}{791\bibrangedash 799}
+    \field{title}{{Science and Statistics}}
+    \field{volume}{71}
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/Documents/Studium/Literatur/Journal of th
+    \verb e American Statistical Association/1976/Box{\_}1976{\_}Science and St
+    \verb atistics.pdf:pdf
+    \endverb
+    \field{journaltitle}{Journal of the American Statistical Association}
+    \field{year}{1976}
+  \endentry
+
+  \entry{Hodgkin1952}{article}{}
+    \name{author}{2}{}{%
+      {{hash=HAL}{%
+         family={Hodgkin},
+         familyi={H\bibinitperiod},
+         given={A.\bibnamedelima L.},
+         giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=HAF}{%
+         family={Huxley},
+         familyi={H\bibinitperiod},
+         given={A.\bibnamedelima F.},
+         giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HALHAF1}
+    \strng{fullhash}{HALHAF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    This article concludes a series of papers concerned with the flow of
+  electric current through the surface membrane of a giant nerve fibre
+  (Hodgkinet al., 1952,J. Physiol.116, 424-448; Hodgkin and Huxley 1952,J.
+  Physiol.116, 449-566). Its general object is to discuss the results of the
+  preceding papers (Section 1), to put them into mathematical form (Section 2)
+  and to whow that they will account for conduction and excitation in
+  quantitative terms (Sections 3-6).%
+    }
+    \verb{doi}
+    \verb 10.1007/BF02459568
+    \endverb
+    \verb{eprint}
+    \verb NIHMS150003
+    \endverb
+    \field{isbn}{1546-1726 (Electronic)$\backslash$n1097-6256 (Linking)}
+    \field{issn}{00928240}
+    \field{number}{4}
+    \field{pages}{500\bibrangedash 544}
+    \field{title}{{A quantitative description of membrane current and its
+  application to conduction and excitation in nerve}}
+    \field{volume}{117}
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/Documents/Studium/Literatur/The Journal o
+    \verb f Physiology/1952/Hodgkin, Huxley{\_}1952{\_}A quantitative descripti
+    \verb on of membrane current and its application to conduction and excitati
+    \verb on in nerve.pdf:pdf
+    \endverb
+    \field{journaltitle}{The Journal of Physiology}
+    \field{eprinttype}{arXiv}
+    \field{year}{1952}
+  \endentry
+
+  \entry{Liao2015}{article}{}
+    \name{author}{3}{}{%
+      {{hash=LQ}{%
+         family={Liao},
+         familyi={L\bibinitperiod},
+         given={Qianli},
+         giveni={Q\bibinitperiod},
+      }}%
+      {{hash=LJZ}{%
+         family={Leibo},
+         familyi={L\bibinitperiod},
+         given={Joel\bibnamedelima Z.},
+         giveni={J\bibinitperiod\bibinitdelim Z\bibinitperiod},
+      }}%
+      {{hash=PT}{%
+         family={Poggio},
+         familyi={P\bibinitperiod},
+         given={Tomaso},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \keyw{Technical Papers: Machine Learning Methods}
+    \strng{namehash}{LQ+1}
+    \strng{fullhash}{LQLJZPT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Gradient backpropagation (BP) requires symmetric feedforward and feedback
+  connections -- the same weights must be used for forward and backward passes.
+  This "weight transport problem" (Grossberg 1987) is thought to be one of the
+  main reasons to doubt BP's biologically plausibility. Using 15 different
+  classification datasets, we systematically investigate to what extent BP
+  really depends on weight symmetry. In a study that turned out to be
+  surprisingly similar in spirit to Lillicrap et al.'s demonstration (Lillicrap
+  et al. 2014) but orthogonal in its results, our experiments indicate that:
+  (1) the magnitudes of feedback weights do not matter to performance (2) the
+  signs of feedback weights do matter -- the more concordant signs between
+  feedforward and their corresponding feedback connections, the better (3) with
+  feedback weights having random magnitudes and 100{\%} concordant signs, we
+  were able to achieve the same or even better performance than SGD. (4) some
+  normalizations/stabilizations are indispensable for such asymmetric BP to
+  work, namely Batch Normalization (BN) (Ioffe and Szegedy 2015) and/or a
+  "Batch Manhattan" (BM) update rule.%
+    }
+    \verb{eprint}
+    \verb 1510.05067
+    \endverb
+    \field{isbn}{9781577357605}
+    \field{pages}{1837\bibrangedash 1844}
+    \field{title}{{How Important is Weight Symmetry in Backpropagation?}}
+    \verb{url}
+    \verb http://arxiv.org/abs/1510.05067
+    \endverb
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/Documents/Studium/Literatur/Unknown/2015/
+    \verb Liao, Leibo, Poggio{\_}2015{\_}How Important is Weight Symmetry in Ba
+    \verb ckpropagation.pdf:pdf
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{year}{2015}
+  \endentry
+
+  \entry{Rao1999}{article}{}
+    \name{author}{2}{}{%
+      {{hash=RRPN}{%
+         family={Rao},
+         familyi={R\bibinitperiod},
+         given={Rajesh P\bibnamedelima N},
+         giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim
+  N\bibinitperiod},
+      }}%
+      {{hash=BDH}{%
+         family={Ballard},
+         familyi={B\bibinitperiod},
+         given={Dana\bibnamedelima H},
+         giveni={D\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RRPNBDH1}
+    \strng{fullhash}{RRPNBDH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1038/4580
+    \endverb
+    \field{number}{1}
+    \field{title}{{Predictive Coding in the Visual Cortex: a Functional
+  Interpretation of Some Extra- classical Receptive-field Effects}}
+    \field{volume}{2}
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/Documents/Studium/Literatur/Nature Neuros
+    \verb cience/1999/Rao, Ballard{\_}1999{\_}Predictive Coding in the Visual C
+    \verb ortex a Functional Interpretation of Some Extra- classical Receptive-
+    \verb field Effects.pdf:pdf
+    \endverb
+    \field{journaltitle}{Nature Neuroscience}
+    \field{year}{1999}
+  \endentry
+
+  \entry{Friston2005}{article}{}
+    \name{author}{1}{}{%
+      {{hash=FK}{%
+         family={Friston},
+         familyi={F\bibinitperiod},
+         given={Karl},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \keyw{bayesian,cortical,generative models,hierarchical,inference,predictive
+  coding}
+    \strng{namehash}{FK1}
+    \strng{fullhash}{FK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1098/rstb.2005.1622
+    \endverb
+    \field{pages}{815\bibrangedash 836}
+    \field{title}{{A theory of cortical responses}}
+    \field{volume}{360}
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/Documents/Studium/Literatur/Philosophical
+    \verb  Transactions of the Royal Society B/2005/Friston{\_}2005{\_}A theory
+    \verb  of cortical responses.pdf:pdf
+    \endverb
+    \field{journaltitle}{Philosophical Transactions of the Royal Society B}
+    \field{year}{2005}
+  \endentry
+
+  \entry{Whittington2017}{article}{}
+    \name{author}{2}{}{%
+      {{hash=WJCR}{%
+         family={Whittington},
+         familyi={W\bibinitperiod},
+         given={James C.\bibnamedelima R.},
+         giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim
+  R\bibinitperiod},
+      }}%
+      {{hash=BR}{%
+         family={Bogacz},
+         familyi={B\bibinitperiod},
+         given={Rafal},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WJCRBR1}
+    \strng{fullhash}{WJCRBR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    To efficiently learn from feedback, cortical networks need to update
+  synaptic weights onmultiple levels of cortical hierarchy.Aneffective and
+  well-known algorithm for computing such changes in synaptic weights is the
+  error backpropagation algorithm. However, in this algorithm, the change in
+  synaptic weights is a complex function of weights and activities of neurons
+  not directly connected with the synapse being modified, whereas the changes
+  in biological synapses are determined only by the activity of presynaptic and
+  postsynaptic neurons. Several models have been proposed that approximate the
+  backpropagation algorithmwith local synaptic plasticity, but these models
+  require complex external control over the network or relatively complex
+  plasticity rules. Hereweshowthat a network developed in the predictive coding
+  framework can efficiently perform supervised learning fully autonomously,
+  employing only simple localHebbian plasticity. Furthermore, for certain
+  parameters, the weight change in the predictive codingmodel converges to that
+  of the backprop- agation algorithm. This suggests that it is possible for
+  cortical networks with simple Hebbian synaptic plasticity to implement
+  efficient learning algorithms in which synapses in areas on multiple levels
+  of hierarchy are modified to minimize the error on the output.%
+    }
+    \verb{doi}
+    \verb 10.1162/NECO
+    \endverb
+    \verb{eprint}
+    \verb 1706.02451
+    \endverb
+    \field{isbn}{0899-7667}
+    \field{issn}{1530888X}
+    \field{pages}{1229\bibrangedash 1262}
+    \field{title}{{An Approximation of the Error Backpropagation Algorithm in a
+  Predictive Coding Network with Local Hebbian Synaptic Plasticity}}
+    \verb{url}
+    \verb http://arxiv.org/abs/1706.02451
+    \endverb
+    \field{volume}{29}
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/Documents/Studium/Literatur/Neural Comput
+    \verb ation/2017/Whittington, Bogacz{\_}2017{\_}An Approximation of the Err
+    \verb or Backpropagation Algorithm in a Predictive Coding Network with Loca
+    \verb l Hebbian Synap.pdf:pdf
+    \endverb
+    \field{journaltitle}{Neural Computation}
+    \field{annotation}{%
+    Topic: Simple Hebbian model approximates neural network error
+  backpropagation. Two classes of biological supervised learning: stochastic
+  neurons and synapses receiving a global feedback signal (via a neuromodulator
+  (long-term neurotransmitter)) - often does not approximate backpropagation
+  and scales poorly. Explicitly approximates backpropagation. Predictive coding
+  framework uses additional nodes that encode the difference between the
+  activity and the predicted activity on a certain level. In Artifical Neural
+  Networks, node correction is obtained by a global error estimate that can be
+  computed via backpropagation. The errors could as well be included as
+  separate nodes.%
+    }
+    \field{eprinttype}{arXiv}
+    \field{year}{2017}
+  \endentry
+
+  \entry{Diestel2017}{book}{}
+    \name{author}{1}{}{%
+      {{hash=DR}{%
+         family={Diestel},
+         familyi={D\bibinitperiod},
+         given={Reinhard},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer-Verlag Berlin Heidelberg}%
+    }
+    \strng{namehash}{DR1}
+    \strng{fullhash}{DR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1007/978-3-662-53622-3
+    \endverb
+    \field{edition}{5}
+    \field{isbn}{978-3-662-53622-3}
+    \field{pages}{429}
+    \field{title}{{Graph Theory}}
+    \field{year}{2017}
+  \endentry
+
+  \entry{Rojas1996}{book}{}
+    \name{author}{1}{}{%
+      {{hash=RR}{%
+         family={Rojas},
+         familyi={R\bibinitperiod},
+         given={Ra{\'{u}}l},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer-Verlag}%
+    }
+    \strng{namehash}{RR1}
+    \strng{fullhash}{RR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Neural Networks}}
+    \list{location}{1}{%
+      {Berlin}%
+    }
+    \field{year}{1996}
+  \endentry
+
+  \entry{Guresen2011}{article}{}
+    \name{author}{2}{}{%
+      {{hash=GE}{%
+         family={Guresen},
+         familyi={G\bibinitperiod},
+         given={Erkam},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=KG}{%
+         family={Kayakutlu},
+         familyi={K\bibinitperiod},
+         given={Gulgun},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \keyw{ann,artificial neural network,graph theory}
+    \strng{namehash}{GEKG1}
+    \strng{fullhash}{GEKG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1016/j.procs.2010.12.071
+    \endverb
+    \field{pages}{426\bibrangedash 433}
+    \field{title}{{Definition of artificial neural networks with comparison to
+  other networks}}
+    \field{volume}{3}
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/Documents/Studium/Literatur/Procedia Comp
+    \verb uter Science/2011/Guresen, Kayakutlu{\_}2011{\_}Definition of artific
+    \verb ial neural networks with comparison to other networks.pdf:pdf
+    \endverb
+    \field{journaltitle}{Procedia Computer Science}
+    \field{annotation}{%
+    This paper provides a definition for neural networks that seems sensible
+  and rigorous (except for the term "connected in parallel" which I would
+  propose as {\textless}{\textgreater} (see remark).%
+    }
+    \field{year}{2011}
+  \endentry
+
+  \entry{Hyde2014}{misc}{}
+    \name{author}{2}{}{%
+      {{hash=HD}{%
+         family={Hyde},
+         familyi={H\bibinitperiod},
+         given={Dominic},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=RD}{%
+         family={Raffman},
+         familyi={R\bibinitperiod},
+         given={Diana},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Metaphysics Research Lab, Stanford University}%
+    }
+    \strng{namehash}{HDRD1}
+    \strng{fullhash}{HDRD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{The Stanford Encyclopedia of Philosophy}
+    \field{edition}{Winter 201}
+    \field{title}{{Sorites Paradox}}
+    \verb{url}
+    \verb https://plato.stanford.edu/archives/win2014/entries/sorites-paradox/
+    \endverb
+    \field{year}{2014}
+  \endentry
+
+  \entry{Dempster1977}{article}{}
+    \name{author}{3}{}{%
+      {{hash=DAP}{%
+         family={Dempster},
+         familyi={D\bibinitperiod},
+         given={A.\bibnamedelima P.},
+         giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=LNM}{%
+         family={Laird},
+         familyi={L\bibinitperiod},
+         given={N.\bibnamedelima M.},
+         giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=RDB}{%
+         family={Rubin},
+         familyi={R\bibinitperiod},
+         given={D.\bibnamedelima B.},
+         giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DAP+1}
+    \strng{fullhash}{DAPLNMRDB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{1\bibrangedash 38}
+    \field{title}{{Maximum Likelihood from Incomplete Data via the EM
+  Algorithm}}
+    \field{volume}{39}
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/Documents/Studium/Literatur/Journal of th
+    \verb e Royal Statistical Society. Series B (Methodological)/1977/Dempster,
+    \verb  Laird, Rubin{\_}1977{\_}Maximum Likelihood from Incomplete Data via
+    \verb the EM Algorithm.pdf:pdf;:C$\backslash$:/Users/samue/Documents/Studiu
+    \verb m/Literatur/Journal of the Royal Statistical Society. Series B (Metho
+    \verb dological)/1977/Dempster, Laird, Rubin{\_}1977{\_}Maximum Likelihood
+    \verb from Incomplete Data via the EM Algorithm(2).pdf:pdf
+    \endverb
+    \field{journaltitle}{Journal of the Royal Statistical Society. Series B
+  (Methodological)}
+    \field{annotation}{%
+    Read section 2 on exponential families.%
+    }
+    \field{year}{1977}
+  \endentry
+
+  \entry{Hebb1949}{book}{}
+    \name{author}{1}{}{%
+      {{hash=HDO}{%
+         family={Hebb},
+         familyi={H\bibinitperiod},
+         given={Donald\bibnamedelima O.},
+         giveni={D\bibinitperiod\bibinitdelim O\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {John Wiley {\&} Sons}%
+    }
+    \strng{namehash}{HDO1}
+    \strng{fullhash}{HDO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{The Organization of Behavior}}
+    \list{location}{1}{%
+      {New York}%
+    }
+    \field{year}{1949}
+  \endentry
+
+  \entry{Gerstner2002}{article}{}
+    \name{author}{2}{}{%
+      {{hash=GW}{%
+         family={Gerstner},
+         familyi={G\bibinitperiod},
+         given={Wulfram},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=KWM}{%
+         family={Kistler},
+         familyi={K\bibinitperiod},
+         given={Werner\bibnamedelima M},
+         giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GWKWM1}
+    \strng{fullhash}{GWKWM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1007/s00422-002-0353-y
+    \endverb
+    \field{isbn}{4121693671}
+    \field{pages}{404\bibrangedash 415}
+    \field{title}{{Mathematical formulations of Hebbian learning}}
+    \field{volume}{87}
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/Documents/Studium/Literatur/Biological Cy
+    \verb bernetics/2002/Gerstner, Kistler{\_}2002{\_}Mathematical formulations
+    \verb  of Hebbian learning.pdf:pdf
+    \endverb
+    \field{journaltitle}{Biological Cybernetics}
+    \field{year}{2002}
+  \endentry
+
+  \entry{Bogacz2017}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BR}{%
+         family={Bogacz},
+         familyi={B\bibinitperiod},
+         given={Rafal},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BR1}
+    \strng{fullhash}{BR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{198\bibrangedash 211}
+    \field{title}{{A tutorial on the free-energy framework for modelling
+  perception and learning}}
+    \field{volume}{76}
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/Documents/Studium/Literatur/Journal of Ma
+    \verb thematical Psychology/2017/Bogacz{\_}2017{\_}A tutorial on the free-e
+    \verb nergy framework for modelling perception and learning.pdf:pdf
+    \endverb
+    \field{journaltitle}{Journal of Mathematical Psychology}
+    \field{year}{2017}
+  \endentry
+
+  \entry{Golberg1972}{article}{}
+    \name{author}{1}{}{%
+      {{hash=GMA}{%
+         family={Golberg},
+         familyi={G\bibinitperiod},
+         given={M.\bibnamedelima A.},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GMA1}
+    \strng{fullhash}{GMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{December}
+    \field{pages}{1124\bibrangedash 1126}
+    \field{title}{{The Derivative of a Determinant}}
+    \field{volume}{79}
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/Documents/Studium/Literatur/The American
+    \verb Mathematical Monthly/1972/Golberg{\_}1972{\_}The Derivative of a Dete
+    \verb rminant.pdf:pdf
+    \endverb
+    \field{journaltitle}{The American Mathematical Monthly}
+    \field{year}{1972}
+  \endentry
+\endsortlist
+\endinput

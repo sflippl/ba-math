@@ -1,0 +1,60 @@
+\defcounter {refsection}{0}\relax 
+\contentsline {Abs}{{}{1.{1}}{}}{1}{Def.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {OP}{{Open Problem}{1}{Layered structure}}{1}{OP.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {Abs}{{}{1.{2}}{Backpropagation Objectve Function}}{1}{Def.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {The}{{Theorem}{1.{3}}{Backpropagation Identity}}{2}{Def.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{1}{}}{2}{Bew.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bem}{{Remark}{1.{4}}{}}{2}{Def.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {Abs}{{}{2.{1}}{Generative Model}}{2}{Def.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bem}{{Remark}{2.{2}}{}}{3}{Def.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {Abs}{{}{2.{3}}{Objective Function of Predictive Coding}}{3}{Def.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {Pro}{{Proposition}{2.{4}}{}}{3}{Def.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{2}{}}{3}{Bew.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {Abs}{{}{2.{5}}{Inference}}{3}{Def.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {The}{{Theorem}{2.{6}}{Predictive Coding Model I: Prediction}}{3}{Def.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{3}{}}{4}{Bew.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {Abs}{{}{2.{7}}{Learnable $\Sigma $}}{4}{Def.2.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {OP}{{Open Problem}{2}{Connection weights as learnable parameters}}{4}{OP.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {Def}{{Definition}{2.{8}}{Predictive Coding Model II: Predictive Network}}{4}{Def.2.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bem}{{Remark}{2.{9}}{}}{5}{Def.2.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {The}{{Theorem}{2.{10}}{}}{5}{Def.2.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{4}{}}{5}{Bew.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {Abs}{{}{2.{11}}{Predictive Coding Model III: Learning Perspectives}}{5}{Def.2.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {Abs}{{}{2.{12}}{Predictive Coding Model IV: Learning $\xi $ and $\Sigma $}}{5}{Def.2.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {The}{{Theorem}{2.{13}}{Learning $\xi $}}{5}{Def.2.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{5}{}}{5}{Bew.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {Abs}{{}{2.{14}}{Hebbian Learning of $\xi $}}{6}{Def.2.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {Pro}{{Proposition}{2.{15}}{Learning $\Sigma $ I: Gradient Ascent}}{6}{Def.2.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {Bew}{{Proof}{6}{}}{6}{Bew.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {OP}{{Open Problem}{3}{Justification of (\ref {logdet})}}{6}{OP.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {Abs}{{}{2.{16}}{Learning $\Sigma $ I}}{6}{Def.2.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {OP}{{Open Problem}{4}{Hebbian $\Sigma $}}{6}{OP.4}

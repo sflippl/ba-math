@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.27)  27 MAY 2018 13:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.27)  15 JUN 2018 18:33
 entering extended mode
 **"./A Mathematical Analysis of Backpropagation and Predictive Coding.tex"
 ("A Mathematical Analysis of Backpropagation and Predictive Coding.tex"
@@ -22,6 +22,16 @@ File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\transparent.sty"
+Package: transparent 2016/05/16 v1.1 Transparency via pdfTeX's color stack (HO)
+
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2017/01/24 v2.0c Standard LaTeX package
 
@@ -718,9 +728,6 @@ Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
-Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
-)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
@@ -1065,9 +1072,6 @@ Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
-Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
-)
 \@linkdim=\dimen130
 \Hy@linkcounter=\count304
 \Hy@pagecounter=\count305
@@ -1171,28 +1175,28 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 \openout1 = `"A Mathematical Analysis of Backpropagation and Predictive Coding.
 aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 115.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 115.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 116.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 116.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1234,13 +1238,13 @@ Package biblatex Info: ... file '"A Mathematical Analysis of Backpropagation an
 d Predictive Coding".bbl' found.
 
 ("A Mathematical Analysis of Backpropagation and Predictive Coding.bbl")
-Package biblatex Info: Reference section=0 on input line 115.
-Package biblatex Info: Reference segment=0 on input line 115.
+Package biblatex Info: Reference section=0 on input line 116.
+Package biblatex Info: Reference segment=0 on input line 116.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 115.
+(lastpage)             ! on input line 116.
 \AtBeginShipoutBox=\box55
-Package hyperref Info: Link coloring ON on input line 115.
+Package hyperref Info: Link coloring ON on input line 116.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1250,9 +1254,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count325
 )
-LaTeX Info: Redefining \ref on input line 115.
-LaTeX Info: Redefining \pageref on input line 115.
-LaTeX Info: Redefining \nameref on input line 115.
+LaTeX Info: Redefining \ref on input line 116.
+LaTeX Info: Redefining \pageref on input line 116.
+LaTeX Info: Redefining \nameref on input line 116.
 
 ("A Mathematical Analysis of Backpropagation and Predictive Coding.out")
 ("A Mathematical Analysis of Backpropagation and Predictive Coding.out")
@@ -1314,10 +1318,15 @@ out"'.
 \c@endExctr=\count342
 \c@currRemctr=\count343
 \c@endRemctr=\count344
-\c@currBewctr=\count345
-\c@endBewctr=\count346
-\c@Bew=\count347
-(titlepage.tex <Bilder/sigill.png, id=95, 339.2675pt x 335.2525pt>
+\c@currBLemctr=\count345
+\c@endBLemctr=\count346
+\c@currBewctr=\count347
+\c@endBewctr=\count348
+\c@Bew=\count349
+\c@currBBewctr=\count350
+\c@endBBewctr=\count351
+\c@BBew=\count352
+(titlepage.tex <Bilder/sigill.png, id=91, 339.2675pt x 335.2525pt>
 File: Bilder/sigill.png Graphic file (type png)
 
 <use Bilder/sigill.png>
@@ -1326,27 +1335,38 @@ Package pdftex.def Info: Bilder/sigill.png used on input line 32.
 ) [1
 
 {C:/Users/samue/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Bilder/si
-gill.png (PNG copy)>] [2
+gill.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
-] [3
+ []
 
-]
-("A Mathematical Analysis of Backpropagation and Predictive Coding.toc"
-LaTeX Font Info:    Try loading font information for U+msa on input line 15.
-
+LaTeX Font Info:    Try loading font information for U+msa on input line 167.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 15.
+LaTeX Font Info:    Try loading font information for U+msb on input line 167.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+)
+<Bilder/Unterschrift.png, id=102, 131.5314pt x 69.3792pt>
+File: Bilder/Unterschrift.png Graphic file (type png)
+
+<use Bilder/Unterschrift.png>
+Package pdftex.def Info: Bilder/Unterschrift.png used on input line 169.
+(pdftex.def)             Requested size: 65.76553pt x 34.6895pt.
+ [2
+
+ <./Bilder/Unterschrift.png>] [3
+
+]
+("A Mathematical Analysis of Backpropagation and Predictive Coding.toc")
 \tf@toc=\write6
 \openout6 = `"A Mathematical Analysis of Backpropagation and Predictive Coding.
 toc"'.
 
- [4
+
+[4
 
 ]
 Chapter 1.
@@ -1354,7 +1374,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.201 \paragraph
+l.216 \paragraph
                 {Generality and Conceptualization} [1
 
 ]
@@ -1367,154 +1387,195 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [2]
 Chapter 2.
 Package hyperref Info: bookmark level for unknown Par defaults to 0 on input li
-ne 217.
+ne 230.
 ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
 Package hyperref Info: bookmark level for unknown Def defaults to 0 on input li
-ne 225.
+ne 238.
 
 [3
 
 ] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
 [4]
-LaTeX Font Info:    Try loading font information for U+euf on input line 333.
+LaTeX Font Info:    Try loading font information for U+euf on input line 346.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
+Package hyperref Info: bookmark level for unknown Rem defaults to 0 on input li
+ne 350.
 Package hyperref Info: bookmark level for unknown Not defaults to 0 on input li
-ne 340.
+ne 353.
  [5]
 Package hyperref Info: bookmark level for unknown Pro defaults to 0 on input li
-ne 415.
+ne 469.
+ [6]
 Package hyperref Info: bookmark level for unknown Bew defaults to 0 on input li
-ne 442.
+ne 496.
 
 ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
-[6] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+[7] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
 ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
 ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
 ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
-[7]
 Package hyperref Info: bookmark level for unknown Lem defaults to 0 on input li
-ne 531.
- ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+ne 586.
+
+[8]
 Package hyperref Info: bookmark level for unknown The defaults to 0 on input li
-ne 583.
-
-[8] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+ne 630.
+Package hyperref Info: bookmark level for unknown BLem defaults to 0 on input l
+ine 641.
+Package hyperref Info: bookmark level for unknown BBew defaults to 0 on input l
+ine 649.
+ ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+[9] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
 Package hyperref Info: bookmark level for unknown Cor defaults to 0 on input li
-ne 620.
+ne 688.
 
 ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
-[9]
-
-LaTeX Warning: Reference `par:missing-priors' on page 10 undefined on input lin
-e 669.
-
-[10] [11] [12]
 ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+[10] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+[11] [12] [13]
 ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
-[13] [14] ("A Mathematical Analysis of Backpropagation and Predictive Coding.th
-m") [15] [16]
-Overfull \hbox (23.03531pt too wide) in paragraph at lines 1145--1146
-[]\T1/cmr/m/n/10.95 In a nor-mal gen-er-a-tive model,
- []
-
-("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
-Overfull \hbox (6.51543pt too wide) in paragraph at lines 1184--1185
-[]\T1/cmr/m/n/10.95 In a nor-
- []
-
-("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
-[17]
-Overfull \hbox (29.49799pt too wide) detected at line 1253
-[][][]
- []
-
+[14] [15] ("A Mathematical Analysis of Backpropagation and Predictive Coding.th
+m") [16] [17]
 ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
 [18] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
-[19] [20] [21]
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+[19] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+[20] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+[21] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+[22] [23] ("A Mathematical Analysis of Backpropagation and Predictive Coding.th
+m") ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+[24] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
 ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
 ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
 ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
-[22] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
 ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
 ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
 ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
 ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
-("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
-("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
-("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
-Overfull \hbox (2.68405pt too wide) in paragraph at lines 1635--1636
+Overfull \hbox (2.68405pt too wide) in paragraph at lines 1713--1714
 []\T1/cmr/m/n/10.95 Why do we con-sider the more com-
  []
 
-[23] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
-("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
-Overfull \hbox (7.34492pt too wide) in paragraph at lines 1654--1657
-[]\T1/cmr/m/n/10.95 Clearly, back-
- []
-
-("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
-[24] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
-Overfull \hbox (2.53815pt too wide) in paragraph at lines 1698--1701
-\T1/cmr/m/n/10.95 Let $\OML/cmm/m/it/10.95 i \OMS/cmsy/m/n/10.95 2 \OML/cmm/m/i
-t/10.95 S[]\OT1/cmr/m/n/10.95 [\U/euf/m/n/10.95 P\OT1/cmr/m/n/10.95 ]\OML/cmm/m
-/it/10.95 ; o \OMS/cmsy/m/n/10.95 2 \OML/cmm/m/it/10.95 S[]\OT1/cmr/m/n/10.95 [
-\U/euf/m/n/10.95 P\OT1/cmr/m/n/10.95 ]$ \T1/cmr/m/n/10.95 be con-stant such tha
-t all $\OML/cmm/m/it/10.95 N[]\OT1/cmr/m/n/10.95 [\U/euf/m/n/10.95 P\OT1/cmr/m/
-n/10.95 ](\OML/cmm/m/it/10.95 i; o\OT1/cmr/m/n/10.95 )$ \T1/cmr/m/n/10.95 and $
-[][] \OML/cmm/m/it/10.95 N[]\OT1/cmr/m/n/10.95 [\U/euf/m/n/10.95 P\OT1/cmr/m/n/
-10.95 ](\OML/cmm/m/it/10.95 i; o\OT1/cmr/m/n/10.95 )$
- []
-
-("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
 [25] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
 ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
 ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
-[26]
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+[26] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+[27] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+[28]
 Chapter 3.
-[27
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 1933.
+
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+[29
 
 ]
-Chapter 4.
-[28
 
-]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 1778
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 1953.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 1953.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 1953.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 1953.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 1953.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 1953.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 1953.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 1953.
+
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+Package hyperref Info: bookmark level for unknown Ex defaults to 0 on input lin
+e 1957.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 1987.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 1987.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 1987.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 1987.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 1987.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 1987.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 1990.
+
+[30] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+[31] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+[32] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+[33] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+[34] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+[35] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+[36]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 2410
 .
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [29
+) [37
 
-] [30
-
-
-]
+] [38]
 Appendix A.
-("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
-("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
-[31
+[39
 
-] 
+] ("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+("A Mathematical Analysis of Backpropagation and Predictive Coding.thm")
+[40] [41] 
 AED: lastpage setting LastPage
-[32]
+[42]
 \tf@thm=\write7
 \openout7 = `"A Mathematical Analysis of Backpropagation and Predictive Coding.
 thm"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1930.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1930.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2684.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2684.
  ("A Mathematical Analysis of Backpropagation and Predictive Coding.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1930.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1930.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2684.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2684.
 
 Package rerunfilecheck Info: File `"A Mathematical Analysis of Backpropagation 
 and Predictive Coding".out' has not changed.
-(rerunfilecheck)             Checksum: B25FA050B90732A63D12D9C020DE097E;1824.
-
-
-LaTeX Warning: There were undefined references.
-
+(rerunfilecheck)             Checksum: D9898E8348015C94BFF343A8F82B086E;1788.
 Package logreq Info: Writing requests to '"A Mathematical Analysis of Backpropa
 gation and Predictive Coding".run.xml'.
 \openout1 = `"A Mathematical Analysis of Backpropagation and Predictive Coding.
@@ -1522,26 +1583,26 @@ run.xml"'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16475 strings out of 493333
- 261606 string characters out of 3139194
- 548526 words of memory out of 3000000
- 19382 multiletter control sequences out of 15000+200000
+ 16844 strings out of 493333
+ 269189 string characters out of 3139194
+ 552964 words of memory out of 3000000
+ 19590 multiletter control sequences out of 15000+200000
  27546 words of font info for 72 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,19n,45p,1038b,1610s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,19n,45p,1258b,1640s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\samue\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
 ectt1095.pk> <C:\Users\samue\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
 ec\dpi600\ecrm0900.pk> <C:\Users\samue\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
 \jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\samue\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\samue\AppData\Local\MiKTeX
-\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk> <C:\Users\samue\AppData\Lo
+\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk> <C:\Users\samue\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\samue\AppData\Lo
 cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\samue\
 AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1095.pk> <C:\Us
-ers\samue\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.
+ers\samue\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.
 pk> <C:\Users\samue\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
-\ecti1095.pk> <C:\Users\samue\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen
-\ec\dpi600\ecrm1000.pk> <C:\Users\samue\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
-r\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\samue\AppData\Local\MiKTeX\2.9\font
+\ecbx1095.pk> <C:\Users\samue\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen
+\ec\dpi600\ecti1095.pk> <C:\Users\samue\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\samue\AppData\Local\MiKTeX\2.9\font
 s\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\samue\AppData\Local\MiKTe
 X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\samue\AppData\L
 ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\samue
@@ -1550,23 +1611,26 @@ sers\samue\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1440
 .pk> <C:\Users\samue\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
 0\eccc1728.pk> <C:\Users\samue\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
 n\ec\dpi600\ecbx2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmm
-i10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+s/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextr
+a/cmex8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/symbols/msbm10.pfb>
 Output written on "A Mathematical Analysis of Backpropagation and Predictive Co
-ding.pdf" (36 pages, 627210 bytes).
+ding.pdf" (46 pages, 739824 bytes).
 PDF statistics:
- 1410 PDF objects out of 1440 (max. 8388607)
- 288 named destinations out of 1000 (max. 500000)
- 190 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1634 PDF objects out of 1728 (max. 8388607)
+ 392 named destinations out of 1000 (max. 500000)
+ 187 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -149,6 +149,29 @@
     \field{year}{1952}
   \endentry
 
+  \entry{Rojas1996}{book}{}
+    \name{author}{1}{}{%
+      {{hash=RR}{%
+         family={Rojas},
+         familyi={R\bibinitperiod},
+         given={Ra{\'{u}}l},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer-Verlag}%
+    }
+    \strng{namehash}{RR1}
+    \strng{fullhash}{RR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Neural Networks}}
+    \list{location}{1}{%
+      {Berlin}%
+    }
+    \field{year}{1996}
+  \endentry
+
   \entry{Liao2015}{article}{}
     \name{author}{3}{}{%
       {{hash=LQ}{%
@@ -382,29 +405,6 @@
     \field{year}{2017}
   \endentry
 
-  \entry{Rojas1996}{book}{}
-    \name{author}{1}{}{%
-      {{hash=RR}{%
-         family={Rojas},
-         familyi={R\bibinitperiod},
-         given={Ra{\'{u}}l},
-         giveni={R\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Springer-Verlag}%
-    }
-    \strng{namehash}{RR1}
-    \strng{fullhash}{RR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{{Neural Networks}}
-    \list{location}{1}{%
-      {Berlin}%
-    }
-    \field{year}{1996}
-  \endentry
-
   \entry{Guresen2011}{article}{}
     \name{author}{2}{}{%
       {{hash=GE}{%
@@ -606,6 +606,142 @@
     \endverb
     \field{journaltitle}{Journal of Mathematical Psychology}
     \field{year}{2017}
+  \endentry
+
+  \entry{Barata2012}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BJCA}{%
+         family={Barata},
+         familyi={B\bibinitperiod},
+         given={Jo{\~{a}}o Carlos\bibnamedelima Alves},
+         giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim
+  A\bibinitperiod},
+      }}%
+      {{hash=HMS}{%
+         family={Hussein},
+         familyi={H\bibinitperiod},
+         given={Mahir\bibnamedelima Saleh},
+         giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \keyw{Moore-Penrose pseudoinverse,Singular values decomposition}
+    \strng{namehash}{BJCAHMS1}
+    \strng{fullhash}{BJCAHMS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    In the last decades the Moore-Penrose pseudoinverse has found a wide range
+  of applications in many areas of Science and became a useful tool for
+  physicists dealing, for instance, with optimization problems, with data
+  analysis, with the solution of linear integral equations, etc. The existence
+  of such applications alone should attract the interest of students and
+  researchers in the Moore-Penrose pseudoinverse and in related sub jects, like
+  the singular values decomposition theorem for matrices. In this note we
+  present a tutorial review of the theory of the Moore-Penrose pseudoinverse.
+  We present the first definitions and some motivations and, after obtaining
+  some basic results, we center our discussion on the Spectral Theorem and
+  present an algorithmically simple expression for the computation of the
+  Moore-Penrose pseudoinverse of a given matrix. We do not claim originality of
+  the results. We rather intend to present a complete and self-contained
+  tutorial review, useful for those more devoted to applications, for those
+  more theoretically oriented and for those who already have some working
+  knowledge of the sub ject.%
+    }
+    \verb{doi}
+    \verb 10.1007/s13538-011-0052-z
+    \endverb
+    \verb{eprint}
+    \verb 1110.6882
+    \endverb
+    \field{issn}{01039733}
+    \field{number}{1-2}
+    \field{pages}{146\bibrangedash 165}
+    \field{title}{{The Moore-Penrose Pseudoinverse: A Tutorial Review of the
+  Theory}}
+    \field{volume}{42}
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/Documents/Studium/Literatur/Brazilian Jou
+    \verb rnal of Physics/2012/Barata, Hussein{\_}2012{\_}The Moore-Penrose Pse
+    \verb udoinverse A Tutorial Review of the Theory.pdf:pdf
+    \endverb
+    \field{journaltitle}{Brazilian Journal of Physics}
+    \field{eprinttype}{arXiv}
+    \field{year}{2012}
+  \endentry
+
+  \entry{Chipman1964}{article}{}
+    \name{author}{1}{}{%
+      {{hash=CJS}{%
+         family={Chipman},
+         familyi={C\bibinitperiod},
+         given={John\bibnamedelima S.},
+         giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CJS1}
+    \strng{fullhash}{CJS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{308}
+    \field{pages}{1078\bibrangedash 1111}
+    \field{title}{{On Least Squares with Insufficient Observations}}
+    \field{volume}{59}
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/Documents/Studium/Literatur/Journal of th
+    \verb e American Statistical Association/1964/Chipman{\_}1964{\_}On Least S
+    \verb quares with Insufficient Observations.pdf:pdf
+    \endverb
+    \field{journaltitle}{Journal of the American Statistical Association}
+    \field{year}{1964}
+  \endentry
+
+  \entry{Ward1977}{article}{}
+    \name{author}{1}{}{%
+      {{hash=WJF}{%
+         family={Ward},
+         familyi={W\bibinitperiod},
+         given={James\bibnamedelima F.},
+         giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WJF1}
+    \strng{fullhash}{WJF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{34\bibrangedash 38}
+    \field{title}{{On a Limit Formula for Weighted Pseudoinverses}}
+    \field{volume}{33}
+    \verb{file}
+    \verb :C$\backslash$:/Users/samue/Documents/Studium/Literatur/SIAM Journal
+    \verb on Applied Mathematics/1977/Ward{\_}1977{\_}On a Limit Formula for We
+    \verb ighted Pseudoinverses.pdf:pdf
+    \endverb
+    \field{journaltitle}{SIAM Journal on Applied Mathematics}
+    \field{year}{1977}
+  \endentry
+
+  \entry{R}{manual}{}
+    \name{author}{1}{}{%
+      {{hash=R}{%
+         family={{R Core Team}},
+         familyi={R\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {R Foundation for Statistical Computing}%
+    }
+    \strng{namehash}{R1}
+    \strng{fullhash}{R1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{R: A Language and Environment for Statistical Computing}}
+    \verb{url}
+    \verb https://www.r-project.org
+    \endverb
+    \list{location}{1}{%
+      {Vienna, Austria}%
+    }
   \endentry
 
   \entry{Golberg1972}{article}{}
